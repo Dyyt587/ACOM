@@ -45,9 +45,6 @@
     <Page Remove="Views\BlankPage1.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
     <Manifest Include="$(ApplicationManifest)" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="CommunityToolkit.WinUI" Version="7.1.2" />
