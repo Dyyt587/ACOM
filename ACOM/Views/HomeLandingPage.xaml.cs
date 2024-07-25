@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
+﻿using System.Diagnostics;
 using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
-using System.Diagnostics;
-using ACOM.ViewModels;
 
 namespace ACOM.Views;
 
@@ -180,9 +168,9 @@ public class MainPage_Singleton : ObservableObject
 public class LinkDeviceDates : ObservableObject
 {
     private string _DeviceName;
-    private string _DeviceDesc="NO desc";
-    private int _boundRate=115200;
-    private int _dateBit=8;
+    private string _DeviceDesc = "NO desc";
+    private int _boundRate = 115200;
+    private int _dateBit = 8;
     private string _checkBit = "N";
     private string _stopBit = "1";
     private string _streamCtrl = "XON/XOFF";
@@ -194,16 +182,18 @@ public class LinkDeviceDates : ObservableObject
     public string ConnectState
     {
         get => is_connect;
-        set {
+        set
+        {
             SetProperty(ref is_connect, value);
-            if (is_connect=="true") {
+            if (is_connect == "true")
+            {
                 Connect();
             }
             else
             {
                 DisConnect();
             }
-        } 
+        }
     }
     public void Connect()
     {
@@ -213,8 +203,8 @@ public class LinkDeviceDates : ObservableObject
     }
     public void DisConnect()
     {
-        Debug.WriteLine(_DeviceName+"disconnect");
-        is_connect ="false";
+        Debug.WriteLine(_DeviceName + "disconnect");
+        is_connect = "false";
     }
     public string DeviceName
     {
@@ -237,7 +227,7 @@ public class LinkDeviceDates : ObservableObject
     public int DateBit
     {
         get => (int)_dateBit;
-        set { SetProperty(ref _dateBit, value); Update(); } 
+        set { SetProperty(ref _dateBit, value); Update(); }
     }
 
     public string CheckBit
@@ -251,7 +241,8 @@ public class LinkDeviceDates : ObservableObject
     public string StopBit
     {
         get => (string)_stopBit;
-        set {
+        set
+        {
             SetProperty(ref _stopBit, value); Update();
         }
     }
@@ -271,7 +262,7 @@ public class LinkDeviceDates : ObservableObject
     }
     public void Update()
     {
-        OverView = _boundRate.ToString()+" "+ _dateBit.ToString()+_checkBit.ToString()+_stopBit.ToString();
+        OverView = _boundRate.ToString() + " " + _dateBit.ToString() + _checkBit.ToString() + _stopBit.ToString();
     }
     public LinkDeviceDates(string deviceName)
     {
@@ -279,7 +270,7 @@ public class LinkDeviceDates : ObservableObject
         Update();
     }
 
-    public LinkDeviceDates(string deviceName,string deviceDesc)
+    public LinkDeviceDates(string deviceName, string deviceDesc)
     {
         DeviceName = deviceName;
         DeviceDesc = deviceDesc;
@@ -320,10 +311,11 @@ public class DataListDatas : ObservableObject
     public SolidColorBrush DataColor
     {
         get => _DataColor;
-        set {
+        set
+        {
             SetProperty(ref _DataColor, value);
 
-        } 
+        }
     }
     public bool is_View
     {
@@ -520,7 +512,8 @@ public sealed partial class HomeLandingPage : Page
         // 使用lambda表达式创建线程
 
 
-        DispatcherQueue.TryEnqueue(() => {
+        DispatcherQueue.TryEnqueue(() =>
+        {
             linkDeviceSource.Clear();
             foreach (string port in Ports)
             {
@@ -529,7 +522,7 @@ public sealed partial class HomeLandingPage : Page
                 {
                     if (p.Contains(port))
                     {
-                        linkDeviceSource.Add(new LinkDeviceDates(port,p));
+                        linkDeviceSource.Add(new LinkDeviceDates(port, p));
                     }
                 }
 
@@ -549,7 +542,7 @@ public sealed partial class HomeLandingPage : Page
         {
             Console.WriteLine("线程启动，执行任务。");
             PortsDesc = SerialPortFindTool.GetSerialPort();
-            ChangeCOM() ;
+            ChangeCOM();
             //建立监听
             ManagementScope scope = new ManagementScope("root\\CIMV2");
             scope.Options.EnablePrivileges = true;
@@ -823,7 +816,7 @@ public sealed partial class HomeLandingPage : Page
 
         if (comboBox != null)
         {
-            if (comboBox.SelectedItem !=null)
+            if (comboBox.SelectedItem != null)
             {
                 foreach (LinkDeviceDates dev in linkDeviceSource)
                 {
@@ -890,8 +883,8 @@ public sealed partial class HomeLandingPage : Page
         Debug.Write("dei");
         if (LinkSerial_Boundrate != null && LinkSerial_DataLength != null &&
             LinkSerial_StopBit != null && LinkSerial_StreamCtrl != null &&
-            LinkSerial_Boundrate.SelectedValue!=null && LinkSerial_DataLength.SelectedValue!=null &&
-            LinkSerial_StopBit.SelectedValue!=null && LinkSerial_StreamCtrl.SelectedValue!=null
+            LinkSerial_Boundrate.SelectedValue != null && LinkSerial_DataLength.SelectedValue != null &&
+            LinkSerial_StopBit.SelectedValue != null && LinkSerial_StreamCtrl.SelectedValue != null
             )
         {
             //if()
@@ -899,7 +892,7 @@ public sealed partial class HomeLandingPage : Page
             {
                 if (dev.DeviceName.Equals(combox_COM.SelectedItem.ToString()))
                 {
-                        Debug.WriteLine(LinkSerial_Boundrate.SelectedValue.ToString());
+                    Debug.WriteLine(LinkSerial_Boundrate.SelectedValue.ToString());
                     dev.BoundRate = Convert.ToInt32(LinkSerial_Boundrate.SelectedValue.ToString());
                     dev.DateBit = (int)LinkSerial_DataLength.SelectedValue;
                     dev.StopBit = (string)LinkSerial_StopBit.SelectedValue;
@@ -923,7 +916,7 @@ public sealed partial class HomeLandingPage : Page
                 }
             }
         }
-        
+
     }
 
     private void ConnectButton_Click(object sender, RoutedEventArgs e)
@@ -934,7 +927,8 @@ public sealed partial class HomeLandingPage : Page
             LinkSerial_StopBit.SelectedValue != null && LinkSerial_StreamCtrl.SelectedValue != null
             )
         {
-            if (combox_COM.SelectedItem != null) {
+            if (combox_COM.SelectedItem != null)
+            {
                 foreach (LinkDeviceDates dev in linkDeviceSource)
                 {
                     if (dev.DeviceName.Equals(combox_COM.SelectedItem.ToString()))
@@ -952,13 +946,13 @@ public sealed partial class HomeLandingPage : Page
             }
             else
             {
-               // ConnectButton. = false;  
+                // ConnectButton. = false;  
             }
 
         }
         else
         {
-           // ConnectButton.Checked = false;
+            // ConnectButton.Checked = false;
         }
 
     }
@@ -970,7 +964,7 @@ public sealed partial class HomeLandingPage : Page
 
         if (barbutton != null)
         {
-            string is_connect =  barbutton.Tag as string;
+            string is_connect = barbutton.Tag as string;
             if (mainPage_Singleton.Is_up == true)
             {
                 FontIcon icon = new FontIcon();

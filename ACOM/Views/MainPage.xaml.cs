@@ -1,18 +1,10 @@
 ﻿namespace ACOM.Views;
 
- using ACOM.Common;
- using ACOM.ViewModels;
-using ACOM.Views;
-  using CommunityToolkit.Mvvm.ComponentModel;
-  using CommunityToolkit.Mvvm.Input;
-  using Microsoft.Extensions.DependencyInjection;
-  using Microsoft.UI;
+using ACOM.ViewModels;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
-     using WinUICommunity;
-     using static ACOM.Common.AppHelper;
-     using static ACOM.Common.LoggerSetup;
+using WinUICommunity;
 public sealed partial class MainPage : Page
 {
     public MainViewModel ViewModel { get; }
