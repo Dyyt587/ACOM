@@ -165,7 +165,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="6.18*"/>
                 <ColumnDefinition Width="6"/>
-                <ColumnDefinition Width="1.22*"/>
+                <ColumnDefinition Width="1.22*" MinWidth="160"/>
             </Grid.ColumnDefinitions>
             <controls:GridSplitter Grid.Column="1"   
                            Width="6"
@@ -178,8 +178,8 @@
 
 
             <!--开始右边部分-->
-            <Pivot  Grid.Column="2" Margin="0 0 8 0 " MinWidth="2">
-                <PivotItem Header="数据概览">
+            <Pivot  Grid.Column="2" Margin="0 0 8 0 " >
+                <PivotItem Header="数据概览" MinWidth="160">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition MinHeight="60" Height="1*"/>
@@ -199,8 +199,12 @@
 
                     </Grid>
                 </PivotItem>
-                <PivotItem Header="连接器">
-                    <Grid >
+                <PivotItem Header="网络" MinWidth="160">
+                    
+                </PivotItem>
+
+                    <PivotItem Header="串口" MinWidth="160">
+                    <Grid x:Name="link_Grid">
                         <Grid.RowDefinitions>
                             <RowDefinition MinHeight="100" Height="120"/>
                             <RowDefinition Height="*"/>
@@ -222,7 +226,7 @@
                     MinWidth="120"
                     MinHeight="250"
                     />
-                        <controls:Segmented Grid.Row="2" HorizontalAlignment="Stretch" 
+                        <!--<controls:Segmented Grid.Row="2" Width="li"
                             SelectedIndex="0"
                             SelectionMode="Single">
                             <controls:SegmentedItem 
@@ -232,7 +236,7 @@
                             <controls:SegmentedItem 
                                     Icon="{ui:FontIcon Glyph=&#xE704;}" />
 
-                        </controls:Segmented>
+                        </controls:Segmented>-->
 
                         <TextBlock Grid.Row="3" Text="USBdevice COM9" FontSize="10" x:Name="TextBlockCOM_Desc">
 

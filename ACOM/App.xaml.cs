@@ -79,7 +79,7 @@ public partial class App : Application
             Exe = "ACOM.exe",
             Param = "{path}"
         };
-        await ContextMenuService.Ins.SaveAsync(menu);
+        //await ContextMenuService.Ins.SaveAsync(menu);
         await DynamicLocalizerHelper.InitializeLocalizer("en-US");
 
         UnhandledException += (s, e) => Logger?.Error(e.Exception, "UnhandledException");
