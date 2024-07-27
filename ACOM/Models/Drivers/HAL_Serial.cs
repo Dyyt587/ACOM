@@ -66,9 +66,21 @@ internal class HAL_Serial :  HAL_Driver
         Debug.WriteLine("连接成功");
     }
 
-    public bool Open(string portName)
+    public bool Open(string portName,int boudRate = 115200,
+        int DataBits = 8,
+        System.IO.Ports.Parity parity = System.IO.Ports.Parity.None,
+        System.IO.Ports.StopBits stopBits= System.IO.Ports.StopBits.One,
+        bool rtsEnable = false)
     {    
         client.PortName = portName;
+        client.BaudRate = boudRate;
+        client.DataBits = DataBits;
+        client.Parity = parity;
+        client.ReceiveBufferSize = 409600;
+        client.SendBufferSize = 409600;
+        client.RtsEnable = rtsEnable;
+        client.StopBits = stopBits;
+
         client.Connect();
         return client.IsConnected;
     }
