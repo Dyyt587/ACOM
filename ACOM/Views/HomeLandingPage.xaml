@@ -224,7 +224,6 @@
 
                     BorderThickness="1"
                     MinWidth="120"
-                    MinHeight="250"
                     />
                         <!--<controls:Segmented Grid.Row="2" Width="li"
                             SelectedIndex="0"
