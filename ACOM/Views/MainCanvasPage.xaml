@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:developertools1="using:CommunityToolkit.WinUI.DeveloperTools" xmlns:wuc="using:WinUICommunity"
     mc:Ignorable="d"
+    xmlns:lvc="using:LiveChartsCore.SkiaSharpView.WinUI"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
@@ -22,8 +23,16 @@
                 <developertools1:AlignmentGrid HorizontalStep="20"
                                   Opacity="0.2"
                                   VerticalStep="20" />
-                <wuc:Particle IsPointerEnable="True" Density="3" />
+                <!--<wuc:Particle IsPointerEnable="True" Density="3" />-->
+                <lvc:CartesianChart Height="128"
+                                    x:Name="chart1"
+                    SyncContext="{x:Bind SyncDates, Mode=OneWay}"
+                    Series="{x:Bind SeriesDates, Mode=OneWay}"
+                    XAxes="{Binding XAxesDates}"
+                    >
 
+                    
+                </lvc:CartesianChart>
             </Grid>
         </ScrollViewer>
     </Grid>
