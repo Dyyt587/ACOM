@@ -117,6 +117,9 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TextControlBox\TextControlBox.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Views\MainCanvasPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -595,7 +595,7 @@ public sealed partial class HomeLandingPage : Page
             dateSource.Add(new DataListDatas("data" + i.ToString(), 0, i.ToString()));
             dateSource[i].DataColor.Color = GenerateDistinctColor((i * 78) % 128);
         }
-
+   
 
         //// 获取所有可用的串口名称
         //Ports = System.IO.Ports.SerialPort.GetPortNames();
@@ -610,6 +610,11 @@ public sealed partial class HomeLandingPage : Page
         ViewModel = App.GetService<HomeLandingViewModel>();
         this.InitializeComponent();
         AppInfo = $"{App.Current.AppName} v{App.Current.AppVersion}";
+
+        for (int i = 0; i < 20000; i++)
+        {
+            textbox.AddLine(textbox.NumberOfLines, "faefe");
+        }
     }
 
     protected override void OnNavigatedTo(NavigationEventArgs e)
