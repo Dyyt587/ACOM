@@ -381,7 +381,7 @@ public sealed partial class HomeLandingPage : Page
     // 当文件系统发生变化时调用的事件处理器
     private static void USBOnChanged(object source, FileSystemEventArgs e)
     {
-        Debug.WriteLine($"Port {e.FullPath} has changed.");
+        Debug.WriteLine($"Port {e.FullPath} has changed."); 
     }
 
     // 当文件被删除时调用的事件处理器

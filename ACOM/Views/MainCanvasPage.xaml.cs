@@ -41,7 +41,7 @@ namespace ACOM.Views
             // in a real application you should stop the loop/task when the view is disposed 
             while (IsReading)
             {
-                await Task.Delay(100);
+                await Task.Delay(20);
 
                 // Because we are updating the chart from a different thread 
                 // we need to use a lock to access the chart data. 
@@ -49,7 +49,7 @@ namespace ACOM.Views
                 lock (SyncDates)
                 {
                     _values.Add(new DateTimePoint(DateTime.Now, _random.Next(0, 10)));
-                    if (_values.Count > 250) _values.RemoveAt(0);
+                    if (_values.Count > 1000) _values.RemoveAt(0);
 
                     // we need to update the separators every time we add a new point 
                     _customAxis.CustomSeparators = GetSeparators();
@@ -87,7 +87,15 @@ namespace ACOM.Views
                 Values = _values,
                 Fill = null,
                 GeometryFill = null,
-                GeometryStroke = null
+                GeometryStroke = null,
+                LineSmoothness = 0,
+                GeometrySize = 6,
+                Stroke = new SolidColorPaint
+                {
+                    Color = SKColors.CornflowerBlue,
+                    StrokeCap = SKStrokeCap.Round,
+                    StrokeThickness = 1,
+                },
             }
         };
 
@@ -103,6 +111,8 @@ namespace ACOM.Views
 
             this.InitializeComponent();
             chart1.XAxes = XAxesDates;
+            chart2.XAxes = XAxesDates;
+
 
         }
     }

@@ -13,7 +13,7 @@
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
 
         <!-- The same large TextBlock, wrapped in a ScrollViewer. -->
-        <ScrollViewer MinHeight="200" MinWidth="200" Height="560"
+        <ScrollViewer MinHeight="200" MinWidth="200" 
                       HorizontalAlignment="Stretch" 
                       VerticalAlignment="Stretch"
                   HorizontalScrollBarVisibility="Auto" 
@@ -24,15 +24,27 @@
                                   Opacity="0.2"
                                   VerticalStep="20" />
                 <!--<wuc:Particle IsPointerEnable="True" Density="3" />-->
-                <lvc:CartesianChart Height="128"
+                <StackPanel Background="PowderBlue">
+                    <lvc:CartesianChart Height="128"
                                     x:Name="chart1"
+                                    
+                    SyncContext="{x:Bind SyncDates, Mode=OneWay}"
+                    Series="{x:Bind SeriesDates, Mode=OneWay}"
+                    XAxes="{Binding XAxesDates}"
+                    >
+                    </lvc:CartesianChart>
+
+                    <lvc:CartesianChart Height="256"
+                                    x:Name="chart2"
+                                    
                     SyncContext="{x:Bind SyncDates, Mode=OneWay}"
                     Series="{x:Bind SeriesDates, Mode=OneWay}"
                     XAxes="{Binding XAxesDates}"
                     >
 
-                    
-                </lvc:CartesianChart>
+                    </lvc:CartesianChart>
+                </StackPanel>
+
             </Grid>
         </ScrollViewer>
     </Grid>
