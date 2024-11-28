@@ -7,11 +7,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:developertools1="using:CommunityToolkit.WinUI.DeveloperTools" xmlns:wuc="using:WinUICommunity"
     mc:Ignorable="d"
-    xmlns:lvc="using:LiveChartsCore.SkiaSharpView.WinUI"
+    xmlns:lvc="using:LiveChartsCore.SkiaSharpView.WinUI" xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
-
+        <Grid.DataContext>
+            ACOM.Models
+        </Grid.DataContext>
         <!-- The same large TextBlock, wrapped in a ScrollViewer. -->
         <ScrollViewer MinHeight="200" MinWidth="200" 
                       HorizontalAlignment="Stretch" 
@@ -25,7 +27,25 @@
                                   VerticalStep="20" />
                 <!--<wuc:Particle IsPointerEnable="True" Density="3" />-->
                 <StackPanel Background="PowderBlue">
-                    <lvc:CartesianChart Height="128"
+                    <chart:SfCartesianChart>
+
+                        <chart:SfCartesianChart.XAxes>
+                            <chart:DateTimeAxis />
+                        </chart:SfCartesianChart.XAxes>
+
+                        <chart:SfCartesianChart.YAxes>
+                            <chart:NumericalAxis />
+                        </chart:SfCartesianChart.YAxes>
+
+                        <chart:SfCartesianChart.Series>
+                            <chart:FastLineSeries x:Name="chart3"
+                                                  ItemsSource="{x:Bind Data}"
+                              
+                              XBindingPath="YValue" 
+                              YBindingPath="XValue"/>
+                        </chart:SfCartesianChart.Series>
+                    </chart:SfCartesianChart>
+                    <!--<lvc:CartesianChart Height="128"
                                     x:Name="chart1"
                                     
                     SyncContext="{x:Bind SyncDates, Mode=OneWay}"
@@ -42,7 +62,7 @@
                     XAxes="{Binding XAxesDates}"
                     >
 
-                    </lvc:CartesianChart>
+                    </lvc:CartesianChart>-->
                 </StackPanel>
 
             </Grid>

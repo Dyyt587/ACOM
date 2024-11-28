@@ -163,6 +163,9 @@
 
 
         <Grid x:Name="ContentArea" >
+            <Grid.DataContext>
+                ACOM.Models
+            </Grid.DataContext>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="6.18*"/>
                 <ColumnDefinition Width="6"/>

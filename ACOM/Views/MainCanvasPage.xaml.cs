@@ -23,6 +23,13 @@ namespace ACOM.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+
+    public class Point
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+    }
+
     public sealed partial class MainCanvasPage : Page
     {
         private readonly Random _random = new();
@@ -31,6 +38,10 @@ namespace ACOM.Views
         private readonly DateTimeAxis _customAxis;// = new DateTimeAxis(span, Formatter);
         public ObservableCollection<ISeries> SeriesDates { get; set; } = new ObservableCollection<ISeries>();
         public Axis[] XAxesDates { get; set; }
+
+
+
+        public List<Point> Data { get; set; }
 
         public object SyncDates { get; } = new object();
         public bool IsReading { get; set; } = true;
@@ -80,6 +91,15 @@ namespace ACOM.Views
         }
         public MainCanvasPage()
         {
+
+            Data = new List<Point>()
+        {
+            new Point { X=1,Y=2 },
+            new Point { X=2,Y=2 },
+            new Point { X=3,Y=2 },
+            new Point { X=4,Y=2 },
+            new Point { X=5,Y=2}
+        };
             SeriesDates = new ObservableCollection<ISeries>
         {
             new LineSeries<DateTimePoint>
@@ -110,8 +130,10 @@ namespace ACOM.Views
         _ = ReadData();
 
             this.InitializeComponent();
-            chart1.XAxes = XAxesDates;
-            chart2.XAxes = XAxesDates;
+            
+
+            //chart1.XAxes = XAxesDates;
+            //chart2.XAxes = XAxesDates;
 
 
         }

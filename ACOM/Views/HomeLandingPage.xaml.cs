@@ -10,6 +10,7 @@ using System.Management;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 using ICommand = System.Windows.Input.ICommand;
+using ACOM.Models;
 
 class SerialPortFindTool
 {
@@ -127,7 +128,7 @@ public class MainPage_Singleton : ObservableObject
 {
     // 定义一个静态变量来保存类的实例
     private static MainPage_Singleton? uniqueInstance;
-
+    //public IO_Manage ioManage;
     // 定义一个标识确保线程同步
     private static readonly object locker = new();
 
@@ -177,7 +178,7 @@ public class LinkDeviceDates : ObservableObject
     private string _overView = "NONE";
 
     public string is_connect = "false";
-
+    private IO_Manage ioManage = IO_Manage.Instance;
 
     public string ConnectState
     {
@@ -197,12 +198,17 @@ public class LinkDeviceDates : ObservableObject
     }
     public void Connect()
     {
-        Debug.WriteLine(_DeviceName + "connect");
-
-        is_connect = "true";
+        Debug.WriteLine(_DeviceName +" " +"connecting...");
+        if (ioManage.Connect(_DeviceName) != null)
+        {
+            Debug.WriteLine(_DeviceName + " " + "connected");
+            is_connect = "true";
+        }
     }
     public void DisConnect()
     {
+
+        ioManage.DisConnect(_DeviceName);
         Debug.WriteLine(_DeviceName + "disconnect");
         is_connect = "false";
     }

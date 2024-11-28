@@ -20,6 +20,8 @@ public partial class App : Application
 
     public App()
     {
+        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("@32372e302e30bhqOCYqpYCohnQdNLH/dOoYKvyAfdorhEGAibwcyRSQ=");
+
         Services = ConfigureServices();
         this.InitializeComponent();
     }
