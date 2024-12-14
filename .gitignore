@@ -369,3 +369,4 @@ ACOMv2/obj/*
 /.vs
 /.vs/ACOMv2
 *.db
+*.pdb
