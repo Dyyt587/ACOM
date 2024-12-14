@@ -180,7 +180,7 @@ namespace ACOMv2.Views
             };
             this.InitializeComponent();
 
-             CanvasView1.Items.Add(InitializeElementGrid(Plugs.WidgetPlugins["ACOMPlug.Widget.Slide"].Create()));
+            // CanvasView1.Items.Add(InitializeElementGrid(Plugs.WidgetPlugins["ACOMPlug.Widget.Slide"].Create()));
 
 
              //FrameworkElement element = InitializeElementGrid( (Activator.CreateInstance(Models.Processers.Plugs.WidgetsPlugins[0]) as IPlugWidgetBase).Create());

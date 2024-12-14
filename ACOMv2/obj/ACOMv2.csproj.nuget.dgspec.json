@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMv2\\ACOMv2.csproj": {}
+    "D:\\ACOM\\ACOMv2\\ACOMv2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlugin\\ACOMPlugin.csproj": {
+    "D:\\ACOM\\ACOMPlugin\\ACOMPlugin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlugin\\ACOMPlugin.csproj",
+        "projectUniqueName": "D:\\ACOM\\ACOMPlugin\\ACOMPlugin.csproj",
         "projectName": "ACOMPlugin.Core",
-        "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlugin\\ACOMPlugin.csproj",
-        "packagesPath": "C:\\Users\\80520\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlugin\\obj\\",
+        "projectPath": "D:\\ACOM\\ACOMPlugin\\ACOMPlugin.csproj",
+        "packagesPath": "C:\\Users\\33368\\.nuget\\packages\\",
+        "outputPath": "D:\\ACOM\\ACOMPlugin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\80520\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\33368\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,7 +42,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -54,10 +53,6 @@
             "ShadowPluginLoader.MetaAttributes": {
               "target": "Package",
               "version": "[1.1.2, )"
-            },
-            "ShadowPluginLoader.Tool": {
-              "target": "Package",
-              "version": "[1.2.1, )"
             },
             "ShadowPluginLoader.WinUI": {
               "target": "Package",
@@ -125,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -140,20 +135,20 @@
         }
       }
     },
-    "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlug\\ACOMPlug.csproj": {
+    "D:\\ACOM\\ACOMPlug\\ACOMPlug.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlug\\ACOMPlug.csproj",
+        "projectUniqueName": "D:\\ACOM\\ACOMPlug\\ACOMPlug.csproj",
         "projectName": "ACOMPlug",
-        "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlug\\ACOMPlug.csproj",
-        "packagesPath": "C:\\Users\\80520\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlug\\obj\\",
+        "projectPath": "D:\\ACOM\\ACOMPlug\\ACOMPlug.csproj",
+        "packagesPath": "C:\\Users\\33368\\.nuget\\packages\\",
+        "outputPath": "D:\\ACOM\\ACOMPlug\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\80520\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\33368\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -162,7 +157,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -179,7 +173,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -257,7 +251,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -272,20 +266,20 @@
         }
       }
     },
-    "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMv2\\ACOMv2.csproj": {
+    "D:\\ACOM\\ACOMv2\\ACOMv2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMv2\\ACOMv2.csproj",
+        "projectUniqueName": "D:\\ACOM\\ACOMv2\\ACOMv2.csproj",
         "projectName": "ACOMv2",
-        "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMv2\\ACOMv2.csproj",
-        "packagesPath": "C:\\Users\\80520\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMv2\\obj\\",
+        "projectPath": "D:\\ACOM\\ACOMv2\\ACOMv2.csproj",
+        "packagesPath": "C:\\Users\\33368\\.nuget\\packages\\",
+        "outputPath": "D:\\ACOM\\ACOMv2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\80520\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\33368\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -294,24 +288,23 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0-windows10.0.22621": {
             "targetAlias": "net9.0-windows10.0.22621.0",
             "projectReferences": {
-              "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlugin\\ACOMPlugin.csproj": {
-                "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlugin\\ACOMPlugin.csproj"
+              "D:\\ACOM\\ACOMPlugin\\ACOMPlugin.csproj": {
+                "projectPath": "D:\\ACOM\\ACOMPlugin\\ACOMPlugin.csproj"
               },
-              "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlug\\ACOMPlug.csproj": {
-                "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlug\\ACOMPlug.csproj"
+              "D:\\ACOM\\ACOMPlug\\ACOMPlug.csproj": {
+                "projectPath": "D:\\ACOM\\ACOMPlug\\ACOMPlug.csproj"
               },
-              "C:\\Users\\80520\\source\\repos\\ACOM\\ClassLibrary1\\ClassLibrary1.csproj": {
-                "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ClassLibrary1\\ClassLibrary1.csproj"
+              "D:\\ACOM\\ClassLibrary1\\ClassLibrary1.csproj": {
+                "projectPath": "D:\\ACOM\\ClassLibrary1\\ClassLibrary1.csproj"
               },
-              "C:\\Users\\80520\\source\\repos\\ACOM\\TextControlBox-WinUI\\TextControlBox\\TextControlBox.csproj": {
-                "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\TextControlBox-WinUI\\TextControlBox\\TextControlBox.csproj"
+              "D:\\ACOM\\TextControlBox-WinUI\\TextControlBox\\TextControlBox.csproj": {
+                "projectPath": "D:\\ACOM\\TextControlBox-WinUI\\TextControlBox\\TextControlBox.csproj"
               }
             }
           }
@@ -324,7 +317,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -332,25 +325,9 @@
         "net9.0-windows10.0.22621": {
           "targetAlias": "net9.0-windows10.0.22621.0",
           "dependencies": {
-            "CommunityToolkit.Common": {
-              "target": "Package",
-              "version": "[8.3.2, )"
-            },
-            "CommunityToolkit.HighPerformance": {
-              "target": "Package",
-              "version": "[8.3.2, )"
-            },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.3.2, )"
-            },
-            "CommunityToolkit.WinUI.Animations": {
-              "target": "Package",
-              "version": "[8.1.240916, )"
-            },
-            "CommunityToolkit.WinUI.Behaviors": {
-              "target": "Package",
-              "version": "[8.1.240916, )"
             },
             "CommunityToolkit.WinUI.Collections": {
               "target": "Package",
@@ -376,10 +353,6 @@
               "target": "Package",
               "version": "[8.1.240916, )"
             },
-            "CommunityToolkit.WinUI.Controls.Primitives": {
-              "target": "Package",
-              "version": "[8.1.240916, )"
-            },
             "CommunityToolkit.WinUI.Controls.RadialGauge": {
               "target": "Package",
               "version": "[8.1.240916, )"
@@ -400,10 +373,6 @@
               "target": "Package",
               "version": "[8.1.240916, )"
             },
-            "CommunityToolkit.WinUI.Controls.Sizers": {
-              "target": "Package",
-              "version": "[8.1.240916, )"
-            },
             "CommunityToolkit.WinUI.Controls.TabbedCommandBar": {
               "target": "Package",
               "version": "[8.1.240916, )"
@@ -412,25 +381,9 @@
               "target": "Package",
               "version": "[8.1.240916, )"
             },
-            "CommunityToolkit.WinUI.Converters": {
-              "target": "Package",
-              "version": "[8.1.240916, )"
-            },
             "CommunityToolkit.WinUI.DeveloperTools": {
               "target": "Package",
               "version": "[8.1.240916, )"
-            },
-            "CommunityToolkit.WinUI.Extensions": {
-              "target": "Package",
-              "version": "[8.1.240916, )"
-            },
-            "CommunityToolkit.WinUI.Helpers": {
-              "target": "Package",
-              "version": "[8.1.240916, )"
-            },
-            "CommunityToolkit.WinUI.Lottie": {
-              "target": "Package",
-              "version": "[8.1.240821, )"
             },
             "CommunityToolkit.WinUI.Media": {
               "target": "Package",
@@ -440,10 +393,6 @@
               "target": "Package",
               "version": "[8.1.240916, )"
             },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -452,17 +401,9 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
             "Microsoft.Windows.SDK.BuildTools": {
               "target": "Package",
               "version": "[10.0.26100.1742, )"
-            },
-            "Microsoft.WindowsAppSDK": {
-              "target": "Package",
-              "version": "[1.6.241114003, )"
             },
             "Microsoft.Xaml.Behaviors.WinUI.Managed": {
               "target": "Package",
@@ -473,10 +414,6 @@
               "version": "[2.14.6, )"
             },
             "STTech.BytesIO.Kcp": {
-              "target": "Package",
-              "version": "[2.14.6, )"
-            },
-            "STTech.BytesIO.Modbus": {
               "target": "Package",
               "version": "[2.14.6, )"
             },
@@ -491,14 +428,6 @@
             "STTech.BytesIO.Udp": {
               "target": "Package",
               "version": "[2.14.6, )"
-            },
-            "Serilog": {
-              "target": "Package",
-              "version": "[4.1.0, )"
-            },
-            "Serilog.Sinks.Console": {
-              "target": "Package",
-              "version": "[6.0.0, )"
             },
             "Serilog.Sinks.Debug": {
               "target": "Package",
@@ -521,10 +450,6 @@
               "version": "[7.1.0, )"
             },
             "WinUICommunity.ContextMenuExtensions": {
-              "target": "Package",
-              "version": "[7.1.0, )"
-            },
-            "WinUICommunity.Core": {
               "target": "Package",
               "version": "[7.1.0, )"
             },
@@ -606,7 +531,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -621,20 +546,20 @@
         }
       }
     },
-    "C:\\Users\\80520\\source\\repos\\ACOM\\ClassLibrary1\\ClassLibrary1.csproj": {
+    "D:\\ACOM\\ClassLibrary1\\ClassLibrary1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\80520\\source\\repos\\ACOM\\ClassLibrary1\\ClassLibrary1.csproj",
+        "projectUniqueName": "D:\\ACOM\\ClassLibrary1\\ClassLibrary1.csproj",
         "projectName": "ClassLibrary1",
-        "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ClassLibrary1\\ClassLibrary1.csproj",
-        "packagesPath": "C:\\Users\\80520\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ClassLibrary1\\obj\\",
+        "projectPath": "D:\\ACOM\\ClassLibrary1\\ClassLibrary1.csproj",
+        "packagesPath": "C:\\Users\\33368\\.nuget\\packages\\",
+        "outputPath": "D:\\ACOM\\ClassLibrary1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\80520\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\33368\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -643,7 +568,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -660,7 +584,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -746,7 +670,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -761,20 +685,20 @@
         }
       }
     },
-    "C:\\Users\\80520\\source\\repos\\ACOM\\TextControlBox-WinUI\\TextControlBox\\TextControlBox.csproj": {
+    "D:\\ACOM\\TextControlBox-WinUI\\TextControlBox\\TextControlBox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\80520\\source\\repos\\ACOM\\TextControlBox-WinUI\\TextControlBox\\TextControlBox.csproj",
+        "projectUniqueName": "D:\\ACOM\\TextControlBox-WinUI\\TextControlBox\\TextControlBox.csproj",
         "projectName": "TextControlBox.WinUI.JuliusKirsch",
-        "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\TextControlBox-WinUI\\TextControlBox\\TextControlBox.csproj",
-        "packagesPath": "C:\\Users\\80520\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\80520\\source\\repos\\ACOM\\TextControlBox-WinUI\\TextControlBox\\obj\\",
+        "projectPath": "D:\\ACOM\\TextControlBox-WinUI\\TextControlBox\\TextControlBox.csproj",
+        "packagesPath": "C:\\Users\\33368\\.nuget\\packages\\",
+        "outputPath": "D:\\ACOM\\TextControlBox-WinUI\\TextControlBox\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\80520\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\33368\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -783,7 +707,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -800,7 +723,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -890,7 +813,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

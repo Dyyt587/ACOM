@@ -224,7 +224,7 @@
 
 
 
-            <!--开始右边部分-->
+            <!--开始右边部分--><!--
             <Pivot  Grid.Column="2" Margin="0 0 8 0 " >
                 <PivotItem Header="数据概览" MinWidth="160">
                     <Grid>
@@ -260,8 +260,8 @@
                             <RowDefinition Height="320"/>
                         </Grid.RowDefinitions>
                         <Border Grid.Row="0" Background="red" Height="100"/>
-                        <!--<Border Grid.Row="1" Background="black" Height="Auto"/>-->
-                        <!-- To create this sample, add/change the following properties onto the code for the base example above: -->
+                        --><!--<Border Grid.Row="1" Background="black" Height="Auto"/>-->
+                        <!-- To create this sample, add/change the following properties onto the code for the base example above: --><!--
                         <ListView Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                             SelectionMode="Multiple" IsMultiSelectCheckBoxEnabled="False" IsRightTapEnabled="True"
                             x:Name="BaseExample"
@@ -270,7 +270,7 @@
                             BorderThickness="1"
                             MinWidth="120"
                             />
-                        <!--<controls:Segmented Grid.Row="2" Width="li"
+                        --><!--<controls:Segmented Grid.Row="2" Width="li"
                             SelectedIndex="0"
                             SelectionMode="Single">
                             <controls:SegmentedItem 
@@ -280,7 +280,7 @@
                             <controls:SegmentedItem 
                                     Icon="{ui:FontIcon Glyph=&#xE704;}" />
 
-                        </controls:Segmented>-->
+                        </controls:Segmented>--><!--
 
                         <TextBlock Grid.Row="3" Text="USBdevice COM9" FontSize="10" x:Name="TextBlockCOM_Desc">
 
@@ -362,7 +362,7 @@
                         </Grid>
                     </Grid>
                 </PivotItem>
-            </Pivot>
+            </Pivot>-->
 
             <!--结束右边部分-->
             <!--开始中间部分-->

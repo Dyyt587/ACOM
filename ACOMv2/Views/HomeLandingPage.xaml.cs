@@ -137,13 +137,13 @@ public sealed partial class HomeLandingPage : Page
             //dialogTextBox.SetLineText(dialogTextBox.CurrentLineIndex, str);
             //dialogTextBox.ScrollBottomIntoView();
 
-            dialogTextBox.Text = total_str.totalString;
+            //dialogTextBox.Text = total_str.totalString;
             //dialogTextBox.LoadText(total_str.totalString);
 
             str = null;
             //scrollview1.ScrollTo(scrollview1.ActualHeight + scrollview1.VerticalOffset,0);
 
-            dialogTextBox.ScrollLineIntoView(dialogTextBox.NumberOfLines);
+            //dialogTextBox.ScrollLineIntoView(dialogTextBox.NumberOfLines);
         });
         
         //GC.Collect();
@@ -164,11 +164,11 @@ public sealed partial class HomeLandingPage : Page
         IO_Manage.updateCannelViewMsg += UpdateCannelViewMsg;
 
 
-        IO_Manage.Instance.updateSerialDevce();
+       // IO_Manage.Instance.updateSerialDevce();
 
         //ListView_LinkDevice.ItemsSource = ViewModel.advancedCollectionView;
 
-        ViewModel.advancedCollectionView.SortDescriptions.Add(new SortDescription("DataName", SortDirection.Descending));
+        //ViewModel.advancedCollectionView.SortDescriptions.Add(new SortDescription("DataName", SortDirection.Descending));
         //ViewModel.advancedCollectionView.Add(new CannelDataView("data", -0, "9"));
         //ViewModel.dateSource.Add(new CannelDataView("data1", -0, "9"));
         //AppInfo = $"{App.Current.AppName} v{App.Current.AppVersion}";
@@ -441,43 +441,43 @@ public sealed partial class HomeLandingPage : Page
     }
 
 
-    private void combox_COM_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        // 获取发送事件的 ComboBox
-        var comboBox = sender as Microsoft.UI.Xaml.Controls.ComboBox;
+    //private void combox_COM_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    //{
+    //    // 获取发送事件的 ComboBox
+    //    var comboBox = sender as Microsoft.UI.Xaml.Controls.ComboBox;
 
-        if (comboBox != null)
-        {
-            if (comboBox.SelectedItem != null)
-            {
-                foreach (LinkDeviceDates dev in ViewModel.linkDeviceSource)
-                {
-                    if (dev.DeviceName.Equals(comboBox.SelectedItem.ToString()))
-                    {
-                        LinkSerial_Boundrate.SelectedValue = dev.BoundRate.ToString();
-                        LinkSerial_DataLength.SelectedValue = dev.DateBit;
-                        LinkSerial_StopBit.SelectedValue = dev.StopBit;
-                        LinkSerial_StreamCtrl.SelectedValue = dev.StreamCtrl;
-                    }
-                }
-            }
-            // 获取当前选中项
-            var selectedItem = comboBox.SelectedItem;
-            foreach (var port in PortsDesc)
-            {
-                Debug.WriteLine(port);
-                if (selectedItem != null)
-                {
-                    if (port.Contains(selectedItem.ToString()))
-                    {
-                        TextBlockCOM_Desc.Text = port;
-                        Console.WriteLine($"Changed selection to: {selectedItem}");
-                        return;
-                    }
-                }
-            }
-        }
-    }
+    //    if (comboBox != null)
+    //    {
+    //        if (comboBox.SelectedItem != null)
+    //        {
+    //            foreach (LinkDeviceDates dev in ViewModel.linkDeviceSource)
+    //            {
+    //                if (dev.DeviceName.Equals(comboBox.SelectedItem.ToString()))
+    //                {
+    //                    LinkSerial_Boundrate.SelectedValue = dev.BoundRate.ToString();
+    //                    LinkSerial_DataLength.SelectedValue = dev.DateBit;
+    //                    LinkSerial_StopBit.SelectedValue = dev.StopBit;
+    //                    LinkSerial_StreamCtrl.SelectedValue = dev.StreamCtrl;
+    //                }
+    //            }
+    //        }
+    //        // 获取当前选中项
+    //        var selectedItem = comboBox.SelectedItem;
+    //        foreach (var port in PortsDesc)
+    //        {
+    //            Debug.WriteLine(port);
+    //            if (selectedItem != null)
+    //            {
+    //                if (port.Contains(selectedItem.ToString()))
+    //                {
+    //                    TextBlockCOM_Desc.Text = port;
+    //                    Console.WriteLine($"Changed selection to: {selectedItem}");
+    //                    return;
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
 
     private void combox_COM_TextSubmitted(ComboBox sender, ComboBoxTextSubmittedEventArgs args)
     {
@@ -507,95 +507,95 @@ public sealed partial class HomeLandingPage : Page
             //    }
             //}
             // 执行相应操作,修改text,还有其他属性
-            TextBlockCOM_Desc.Text = IO_Manage.Instance.GetFriendlyName(selectedItem.ToString());
+            //TextBlockCOM_Desc.Text = IO_Manage.Instance.GetFriendlyName(selectedItem.ToString());
         }
     }
 
-    private void LinkSerial_COM_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        Debug.Write("dei");
-        if (LinkSerial_Boundrate != null && LinkSerial_DataLength != null &&
-            LinkSerial_StopBit != null && LinkSerial_StreamCtrl != null &&
-            LinkSerial_Boundrate.SelectedValue != null && LinkSerial_DataLength.SelectedValue != null &&
-            LinkSerial_StopBit.SelectedValue != null && LinkSerial_StreamCtrl.SelectedValue != null && combox_COM.SelectedItem != null
-            )
-        {
-            var portName = combox_COM.SelectedItem.ToString();
-            //if()
-            foreach (LinkDeviceDates dev in ViewModel.linkDeviceSource)
-            {
-                if (dev.DeviceName.Equals(portName))
-                {
-                    Debug.WriteLine(LinkSerial_Boundrate.SelectedValue.ToString());
+    //private void LinkSerial_COM_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    //{
+    //    Debug.Write("dei");
+    //    if (LinkSerial_Boundrate != null && LinkSerial_DataLength != null &&
+    //        LinkSerial_StopBit != null && LinkSerial_StreamCtrl != null &&
+    //        LinkSerial_Boundrate.SelectedValue != null && LinkSerial_DataLength.SelectedValue != null &&
+    //        LinkSerial_StopBit.SelectedValue != null && LinkSerial_StreamCtrl.SelectedValue != null && combox_COM.SelectedItem != null
+    //        )
+    //    {
+    //        var portName = combox_COM.SelectedItem.ToString();
+    //        //if()
+    //        foreach (LinkDeviceDates dev in ViewModel.linkDeviceSource)
+    //        {
+    //            if (dev.DeviceName.Equals(portName))
+    //            {
+    //                Debug.WriteLine(LinkSerial_Boundrate.SelectedValue.ToString());
 
-                    TextBlockCOM_Desc.Text = dev.DeviceDesc;
+    //                TextBlockCOM_Desc.Text = dev.DeviceDesc;
 
-                    dev.BoundRate = Convert.ToInt32(LinkSerial_Boundrate.SelectedValue.ToString());
-                    dev.DateBit = (int)LinkSerial_DataLength.SelectedValue;
-                    dev.StopBit = (string)LinkSerial_StopBit.SelectedValue;
-                    dev.StreamCtrl = (string)LinkSerial_StreamCtrl.SelectedValue;
-                    if (LinkSerial_CheckBit.SelectedIndex == 0)
-                    {
-                        dev.CheckBit = "N";
-                    }
-                    else if (LinkSerial_CheckBit.SelectedIndex == 1)
-                    {
-                        dev.CheckBit = "O";
-                    }
-                    else if (LinkSerial_CheckBit.SelectedIndex == 2)
-                    {
-                        dev.CheckBit = "D";
-                    }
-                    else
-                    {
-                        dev.CheckBit = " ";
-                    }
-                }
-            }
-        }
+    //                dev.BoundRate = Convert.ToInt32(LinkSerial_Boundrate.SelectedValue.ToString());
+    //                dev.DateBit = (int)LinkSerial_DataLength.SelectedValue;
+    //                dev.StopBit = (string)LinkSerial_StopBit.SelectedValue;
+    //                dev.StreamCtrl = (string)LinkSerial_StreamCtrl.SelectedValue;
+    //                if (LinkSerial_CheckBit.SelectedIndex == 0)
+    //                {
+    //                    dev.CheckBit = "N";
+    //                }
+    //                else if (LinkSerial_CheckBit.SelectedIndex == 1)
+    //                {
+    //                    dev.CheckBit = "O";
+    //                }
+    //                else if (LinkSerial_CheckBit.SelectedIndex == 2)
+    //                {
+    //                    dev.CheckBit = "D";
+    //                }
+    //                else
+    //                {
+    //                    dev.CheckBit = " ";
+    //                }
+    //            }
+    //        }
+    //    }
 
-    }
+    //}
 
-    private void ConnectButton_Click(object sender, RoutedEventArgs e)
-    {
-        if (LinkSerial_Boundrate != null && LinkSerial_DataLength != null &&
-            LinkSerial_StopBit != null && LinkSerial_StreamCtrl != null &&
-            LinkSerial_Boundrate.SelectedValue != null && LinkSerial_DataLength.SelectedValue != null &&
-            LinkSerial_StopBit.SelectedValue != null && LinkSerial_StreamCtrl.SelectedValue != null
-            )
-        {
-            if (combox_COM.SelectedItem != null)
-            {
-                foreach (LinkDeviceDates dev in ViewModel.linkDeviceSource)
-                {
-                    if (dev.DeviceName.Equals(combox_COM.SelectedItem.ToString()))
-                    {
-                        if (ConnectButton.IsChecked == false)
-                        {
-                            dev.DisConnect();
-                            return;
-                        }
-                        else
-                        {
-                            //TODO BUG 应该有重复的项目导致会有异常
-                            dev.Connect();
-                            return;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                // ConnectButton. = false;  
-            }
+    //private void ConnectButton_Click(object sender, RoutedEventArgs e)
+    //{
+    //    if (LinkSerial_Boundrate != null && LinkSerial_DataLength != null &&
+    //        LinkSerial_StopBit != null && LinkSerial_StreamCtrl != null &&
+    //        LinkSerial_Boundrate.SelectedValue != null && LinkSerial_DataLength.SelectedValue != null &&
+    //        LinkSerial_StopBit.SelectedValue != null && LinkSerial_StreamCtrl.SelectedValue != null
+    //        )
+    //    {
+    //        if (combox_COM.SelectedItem != null)
+    //        {
+    //            foreach (LinkDeviceDates dev in ViewModel.linkDeviceSource)
+    //            {
+    //                if (dev.DeviceName.Equals(combox_COM.SelectedItem.ToString()))
+    //                {
+    //                    if (ConnectButton.IsChecked == false)
+    //                    {
+    //                        dev.DisConnect();
+    //                        return;
+    //                    }
+    //                    else
+    //                    {
+    //                        //TODO BUG 应该有重复的项目导致会有异常
+    //                        dev.Connect();
+    //                        return;
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        else
+    //        {
+    //            // ConnectButton. = false;  
+    //        }
 
-        }
-        else
-        {
-            // ConnectButton.Checked = false;
-        }
+    //    }
+    //    else
+    //    {
+    //        // ConnectButton.Checked = false;
+    //    }
 
-    }
+    //}
 
     private void LinkButton_Click(object sender, RoutedEventArgs e)
     {

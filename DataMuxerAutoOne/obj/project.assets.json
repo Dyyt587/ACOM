@@ -1350,23 +1350,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\80520\\.nuget\\packages\\": {},
+    "C:\\Users\\33368\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\80520\\source\\repos\\ACOM\\DataMuxerAutoOne\\DataMuxerPlugAutoOne.csproj",
+      "projectUniqueName": "D:\\ACOM\\DataMuxerAutoOne\\DataMuxerPlugAutoOne.csproj",
       "projectName": "DataMuxerPlugAutoOne",
-      "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\DataMuxerAutoOne\\DataMuxerPlugAutoOne.csproj",
-      "packagesPath": "C:\\Users\\80520\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\80520\\source\\repos\\ACOM\\DataMuxerAutoOne\\obj\\",
+      "projectPath": "D:\\ACOM\\DataMuxerAutoOne\\DataMuxerPlugAutoOne.csproj",
+      "packagesPath": "C:\\Users\\33368\\.nuget\\packages\\",
+      "outputPath": "D:\\ACOM\\DataMuxerAutoOne\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\80520\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\33368\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1375,15 +1375,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "projectReferences": {
-            "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlug\\ACOMPlug.csproj": {
-              "projectPath": "C:\\Users\\80520\\source\\repos\\ACOM\\ACOMPlug\\ACOMPlug.csproj"
+            "D:\\ACOM\\ACOMPlug\\ACOMPlug.csproj": {
+              "projectPath": "D:\\ACOM\\ACOMPlug\\ACOMPlug.csproj"
             }
           }
         }
@@ -1396,7 +1395,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -1474,7 +1473,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
@@ -1488,5 +1487,13 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "获取包漏洞数据时出错: 响应状态代码不指示成功: 404 (Not Found)。"
+    }
+  ]
 }

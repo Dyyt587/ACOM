@@ -588,15 +588,15 @@ NOT_INIT:
         IO_Manage() {
 
 
-            ManagementEventWatcher watcher;
+            //ManagementEventWatcher watcher;
 
-            //创建ManagmentEventWatcher 对象
-            watcher = new ManagementEventWatcher("SELECT *FROM Win32_DeviceChangeEvent WHERE EventType = 2 or EventType = 3 ");
-            //添加设备变化事件处理程序
-            watcher.EventArrived += Watcher_EventArrived;
-            //开始监听
-            watcher.Start();
-            Plugs.InitAsync("C:\\Users\\80520\\source\\repos\\ACOM\\ACOMv2\\Assets\\Plugs\\");
+            ////创建ManagmentEventWatcher 对象
+            //watcher = new ManagementEventWatcher("SELECT *FROM Win32_DeviceChangeEvent WHERE EventType = 2 or EventType = 3 ");
+            ////添加设备变化事件处理程序
+            //watcher.EventArrived += Watcher_EventArrived;
+            ////开始监听
+            //watcher.Start();
+            //Plugs.InitAsync("C:\\Users\\80520\\source\\repos\\ACOM\\ACOMv2\\Assets\\Plugs\\");
 
 
 
