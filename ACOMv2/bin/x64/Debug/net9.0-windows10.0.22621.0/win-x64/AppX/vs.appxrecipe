@@ -30,7 +30,7 @@
     <AppXManifest Include="D:\ACOM\ACOMv2\bin\x64\Debug\net9.0-windows10.0.22621.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-14T19:06:39.939</Modified>
+      <Modified>2024-12-14T19:12:12.504</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +60,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\ACOM\ACOMv2\bin\x64\Debug\net9.0-windows10.0.22621.0\win-x64\ACOMv2.dll">
       <PackagePath>ACOMv2.dll</PackagePath>
-      <Modified>2024-12-14T19:06:38.797</Modified>
+      <Modified>2024-12-14T19:12:11.846</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\ACOM\ACOMPlugin\bin\Debug\net8.0-windows10.0.19041.0\ACOMPlugin.dll">
       <PackagePath>ACOMPlugin.dll</PackagePath>
@@ -80,7 +80,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\ACOM\ACOMv2\obj\x64\Debug\net9.0-windows10.0.22621.0\win-x64\apphost.exe">
       <PackagePath>ACOMv2.exe</PackagePath>
-      <Modified>2024-12-14T19:06:38.815</Modified>
+      <Modified>2024-12-14T19:12:11.866</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\33368\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>

@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "D:\\ACOM\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\33368\\AppData\\Local\\Temp\\.vsdbgsrc\\1b4c929944760d7b7ff661d2e405eccaabbdaf7b0a3cbb5c78134208a8716031\\App.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{546DCE78-C78C-48F2-868B-C189A7117C80}|ACOMv2\\ACOMv2.csproj|d:\\acom\\acomv2\\views\\homelandingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{546DCE78-C78C-48F2-868B-C189A7117C80}|ACOMv2\\ACOMv2.csproj|solutionrelative:acomv2\\views\\homelandingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -21,9 +24,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{546DCE78-C78C-48F2-868B-C189A7117C80}|ACOMv2\\ACOMv2.csproj|d:\\acom\\acomv2\\models\\io_manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{546DCE78-C78C-48F2-868B-C189A7117C80}|ACOMv2\\ACOMv2.csproj|solutionrelative:acomv2\\models\\io_manage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\33368\\AppData\\Local\\Temp\\.vsdbgsrc\\1b4c929944760d7b7ff661d2e405eccaabbdaf7b0a3cbb5c78134208a8716031\\App.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{546DCE78-C78C-48F2-868B-C189A7117C80}|ACOMv2\\ACOMv2.csproj|d:\\acom\\acomv2\\viewmodels\\homelandingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -136,11 +136,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ACOMv2",
               "DocumentMoniker": "D:\\ACOM\\ACOMv2\\ACOMv2.csproj",
               "RelativeDocumentMoniker": "ACOMv2\\ACOMv2.csproj",
@@ -152,12 +152,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HomeLandingPage.xaml",
               "DocumentMoniker": "D:\\ACOM\\ACOMv2\\Views\\HomeLandingPage.xaml",
               "RelativeDocumentMoniker": "ACOMv2\\Views\\HomeLandingPage.xaml",
-              "ToolTip": "D:\\ACOM\\ACOMv2\\Views\\HomeLandingPage.xaml \u2B24",
-              "RelativeToolTip": "ACOMv2\\Views\\HomeLandingPage.xaml \u2B24",
+              "ToolTip": "D:\\ACOM\\ACOMv2\\Views\\HomeLandingPage.xaml",
+              "RelativeToolTip": "ACOMv2\\Views\\HomeLandingPage.xaml",
               "ViewState": "AgIAAGkBAAAAAAAAAAAAAG8BAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-14T16:23:39.456Z",
@@ -189,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IO_Manage.cs",
               "DocumentMoniker": "D:\\ACOM\\ACOMv2\\Models\\IO_Manage.cs",
               "RelativeDocumentMoniker": "ACOMv2\\Models\\IO_Manage.cs",
@@ -201,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "HomeLandingPage.xaml.cs",
               "DocumentMoniker": "D:\\ACOM\\ACOMv2\\Views\\HomeLandingPage.xaml.cs",
               "RelativeDocumentMoniker": "ACOMv2\\Views\\HomeLandingPage.xaml.cs",
@@ -214,18 +214,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "App.cs",
               "DocumentMoniker": "C:\\Users\\33368\\AppData\\Local\\Temp\\.vsdbgsrc\\1b4c929944760d7b7ff661d2e405eccaabbdaf7b0a3cbb5c78134208a8716031\\App.cs",
-              "ToolTip": "C:\\Users\\33368\\AppData\\Local\\Temp\\.vsdbgsrc\\1b4c929944760d7b7ff661d2e405eccaabbdaf7b0a3cbb5c78134208a8716031\\App.cs [\u53EA\u8BFB]",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAuwLIAAAACAAAAAQAAAA==",
+              "ToolTip": "C:\\Users\\33368\\AppData\\Local\\Temp\\.vsdbgsrc\\1b4c929944760d7b7ff661d2e405eccaabbdaf7b0a3cbb5c78134208a8716031\\App.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAuwLUAAABEAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T17:12:58.215Z",
-              "EditorCaption": " [\u53EA\u8BFB]"
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CanvasPanelPage.xaml.cs",
               "DocumentMoniker": "D:\\ACOM\\ACOMv2\\Views\\CanvasPanelPage.xaml.cs",
               "RelativeDocumentMoniker": "ACOMv2\\Views\\CanvasPanelPage.xaml.cs",
