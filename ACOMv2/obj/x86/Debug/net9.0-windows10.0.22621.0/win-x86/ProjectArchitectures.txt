@@ -1,5 +1,0 @@
-C:\Users\80520\source\repos\ACOM\ACOMPlug\ACOMPlug.csproj;neutral
-C:\Users\80520\source\repos\ACOM\ACOMPlug\ACOMPlug.csproj;neutral
-C:\Users\80520\source\repos\ACOM\ACOMv2\ACOMv2.csproj;x86
-C:\Users\80520\source\repos\ACOM\TextControlBox-WinUI\TextControlBox\TextControlBox.csproj;neutral
-C:\Users\80520\source\repos\ACOM\TextControlBox-WinUI\TextControlBox\TextControlBox.csproj;neutral
