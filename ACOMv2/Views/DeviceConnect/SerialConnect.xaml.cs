@@ -27,6 +27,8 @@ namespace ACOMv2.Views.DeviceConnect
     public sealed partial class SerialConnect : Page
     {
         private MainViewModel ViewModel;
+        private HomeLandingViewModel homeLandingViewModel;
+
         private string ContentRequestItemName;
         string[] PortsDesc = { "NULL" };
         IO_Manage iomanage = IO_Manage.Instance;
@@ -70,7 +72,7 @@ namespace ACOMv2.Views.DeviceConnect
         public SerialConnect()
         {
             ViewModel = App.GetService<MainViewModel>();
-
+            homeLandingViewModel = App.GetService<HomeLandingViewModel>();
 
             this.InitializeComponent();
 
@@ -148,8 +150,11 @@ namespace ACOMv2.Views.DeviceConnect
                             LinkSerial_DataLength.SelectedValue = dev.DateBit.ToString();
                             LinkSerial_StopBit.SelectedValue = dev.StopBit;
                             LinkSerial_StreamCtrl.SelectedValue = dev.StreamCtrl;
+
+
                             if (dev.ConnectState)
                             {
+ 
                                 ConnectButton.IsChecked = true;
 
                             }
@@ -202,7 +207,6 @@ namespace ACOMv2.Views.DeviceConnect
                 )
             {
                 var portName = combox_COM.SelectedItem.ToString();
-                //if()
                 foreach (SerialDevices dev in ViewModel.serialDevices)
                 {
                     if (dev.DeviceName.Equals(portName))
@@ -269,7 +273,7 @@ namespace ACOMv2.Views.DeviceConnect
                             {
                                 combox_COM.SelectedValue = dev.DeviceName;
                                 ConnectButton.IsChecked = false;
-                                ViewModel.SerialPortsFriendlyLinkedSource.Remove(dev.DeviceName);
+                                homeLandingViewModel.SerialPortsFriendlyLinkedSource.Remove(dev.DeviceName);
 
                             }
                             else
@@ -286,7 +290,7 @@ namespace ACOMv2.Views.DeviceConnect
                             {
                                 combox_COM.SelectedValue = dev.DeviceName;
                                 ConnectButton.IsChecked = true;
-                                ViewModel.SerialPortsFriendlyLinkedSource.Add(dev.DeviceName);
+                                homeLandingViewModel.SerialPortsFriendlyLinkedSource.Add(dev.DeviceName);
 
                             }
                             else
@@ -317,7 +321,7 @@ namespace ACOMv2.Views.DeviceConnect
                                 if (dev.DisConnect())
                                 {
                                     ConnectButton.IsChecked = false;
-                                    ViewModel.SerialPortsFriendlyLinkedSource.Remove(dev.DeviceName);
+                                    homeLandingViewModel.SerialPortsFriendlyLinkedSource.Remove(dev.DeviceName);
 
                                 }
                                 else
@@ -333,7 +337,7 @@ namespace ACOMv2.Views.DeviceConnect
                                 if (dev.Connect())
                                 {
                                     ConnectButton.IsChecked = true;
-                                    ViewModel.SerialPortsFriendlyLinkedSource.Add(dev.DeviceName);
+                                    homeLandingViewModel.SerialPortsFriendlyLinkedSource.Add(dev.DeviceName);
                                 }
                                 else
                                 {

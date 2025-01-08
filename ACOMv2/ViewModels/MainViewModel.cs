@@ -12,10 +12,11 @@ public partial class MainViewModel : ObservableObject, ITitleBarAutoSuggestBoxAw
 
     public ObservableCollection<SerialDevices> serialDevices = new(); //可以连接的串口设备
     public ObservableCollection<string> SerialPortsSource = new(); //连接设备
-    public ObservableCollection<string> SerialPortsFriendlyLinkedSource = new(); //连接设备
-    public int SelectedLinkedSendSerialIndex = 0;
-    public int ConfigingSerialDeviceIndex = 0; //正在配置的串口设备
+    //public ObservableCollection<string> SerialPortsFriendlyLinkedSource = new(); //连接设备
 
+
+    //public int SelectedLinkedSendSerialIndex = 0;
+    //public int ConfigingSerialDeviceIndex = 0; //正在配置的串口设备
 
     public AdvancedCollectionView advancedCollectionView;
     public List<ACOM.Models.SerialDevice> Devices = new();// = serialDevices;
@@ -23,6 +24,10 @@ public partial class MainViewModel : ObservableObject, ITitleBarAutoSuggestBoxAw
 
     public List<Page> CanvasPages = new();
 
+
+    public MainViewModel()
+    {
+     }
 
     public void OnAutoSuggestBoxTextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
     {

@@ -450,7 +450,7 @@
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="发送延时" Margin="2 0 4 0"
                                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    <ComboBox MinWidth="105" SelectedIndex="0" IsEditable="True">
+                                    <ComboBox MinWidth="105" SelectedIndex="0" IsEditable="True" x:Name="ResendDelay">
                                         <ComboBoxItem Content="1ms" />
                                         <ComboBoxItem Content="10ms" />
                                         <ComboBoxItem Content="100ms" />
@@ -459,7 +459,7 @@
                                 </StackPanel>
                             </AppBarElementContainer>
                             <AppBarToggleButton Icon="{ui:FontIcon Glyph=&#xECC5;}"
-                                        Label="ReSend"
+                                        Label="ReSend" Checked="AppBarToggleButton_Checked" Unchecked="AppBarToggleButton_Unchecked"
                             />
                             <AppBarSeparator />
                             <AppBarButton Icon="Delete" Label="清空" Click="AppBarButton_Click_1">

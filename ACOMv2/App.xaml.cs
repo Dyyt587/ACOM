@@ -31,7 +31,7 @@ public partial class App : Application
     public App()
     {
         LoggerSetup.ConfigureLogger();
-        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzYyMDAwMkAzMjM4MmUzMDJlMzBseXZsekVaVS9pTk9BSTdLTWUxclkrdUwwRXNxVENQcTFmNEdHSlhvYzNZPQ==");
+        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NMaF5cXmBCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdmWX5eeHRXRGlcVEB2W0c=");
         Services = ConfigureServices();
         this.InitializeComponent();
         ApplicationExtensionHost.Initialize(this);
@@ -67,7 +67,7 @@ public partial class App : Application
         services.AddTransient<AppUpdateSettingViewModel>();
         services.AddTransient<AboutUsSettingViewModel>();
         //services.AddTransient<BreadCrumbBarViewModel>();
-        services.AddTransient<HomeLandingViewModel>();
+        services.AddSingleton<HomeLandingViewModel>();
 
         return services.BuildServiceProvider();
     }

@@ -190,7 +190,7 @@ public class Plugs
         //await loader.ImportFromZipAsync(@"C:\Users\80520\source\repos\ACOM\Packages");
 
         //
-        string directoryPath = @"C:\Users\80520\source\repos\ACOM\Packages"; // 替换为你的文件夹路径
+        string directoryPath = @"C:\ACOM\Packages"; // 替换为你的文件夹路径
         //string directoryPath = @"C:\Users\80520\source\repos\ACOM\plugin_test2\bin\Debug"; // 替换为你的文件夹路径
 
         if (Directory.Exists(directoryPath))

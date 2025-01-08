@@ -685,14 +685,15 @@ namespace ACOM.Models
             //开始监听
             //watcher.Start();
 
-            //System.Timers.Timer timer = new System.Timers.Timer();
-            //timer.Interval = 100; // 设置时间间隔为100毫秒（0.1秒）
-            //timer.Elapsed += new System.Timers.ElapsedEventHandler(((sender, e) => {
-            //    IO_Manage.Instance.doing = 1;
-            //    IO_Manage.Instance.updateSerialDevce();
-            //}));
-            //timer.AutoReset =  true; // 设置定时器在触发一次后不自动重置
-            //timer.Start();
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 100; // 设置时间间隔为100毫秒（0.1秒）
+            timer.Elapsed += new System.Timers.ElapsedEventHandler(((sender, e) =>
+            {
+                IO_Manage.Instance.doing = 1;
+                IO_Manage.Instance.updateSerialDevce();
+            }));
+            timer.AutoReset = true; // 设置定时器在触发一次后不自动重置
+            timer.Start();
 
             smartThreadPool.MaxQueueLength = 128;
             smartThreadPool.MinThreads = 8;
