@@ -39,8 +39,6 @@ namespace ACOMv2.Views.DeviceConnect
             {
                 DispatcherQueue.TryEnqueue(() =>
                 {
-                    Debug.WriteLine("update serial1");
-                    Debug.WriteLine("update serial2");
 
                     foreach (var device in serialDevices)
                     {
