@@ -204,17 +204,18 @@ public class Plugs
                 await loader.ImportFromDirAsync(subDirectory);
 
 
-                Debug.WriteLine("加载到 " + loader.GetPlugins().Count().ToString() + " 个插件");
-                foreach (var plugin in loader.GetPlugins())
-                {
-                    cnt++;
-                    WidgetPlugins.Add(plugin.Id, plugin);
-                    Debug.WriteLine(plugin.Id);
-                    FrameworkElement element = plugin.Create();
-                }
+                Debug.WriteLine("已经加载到 " + loader.GetPlugins().Count().ToString() + " 个插件");
+
             }
-            await loader.ImportFromZipAsync(directoryPath);
-            Debug.WriteLine("加载到 " + loader.GetPlugins().Count().ToString() + " 个插件");
+            foreach (var plugin in loader.GetPlugins())
+            {
+                cnt++;
+                WidgetPlugins.Add(plugin.Id, plugin);
+                Debug.WriteLine(plugin.Id);
+                FrameworkElement element = plugin.Create();
+            }
+            //await loader.ImportFromZipAsync(directoryPath);
+            //Debug.WriteLine("加载到 " + loader.GetPlugins().Count().ToString() + " 个插件");
             Debug.WriteLine("一共加载插件个数 " + cnt.ToString());
 
         }
