@@ -63,9 +63,9 @@ public partial class Slide : ACOMPluginBase
             return base.Equals(obj);
         }
 
-        public override string GetEmoji()
+        public override string GetName()
         {
-            return "Happy";
+            return "滑块";
         }
         //public void UpdateData(List<CannelData> newData)
         //{

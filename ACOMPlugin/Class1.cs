@@ -38,7 +38,7 @@ public enum SystemCommandEnum
 public abstract class ACOMPluginBase : AbstractPlugin
 {
 
-    public abstract string GetEmoji();
+    public abstract string GetName();
     public abstract IconSourceElement GetIcon();
     public abstract string GetLabel();
     public abstract string GetTag();

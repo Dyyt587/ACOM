@@ -14,7 +14,7 @@
         <StackPanel Margin="10"
                     wuc:PanelAttach.ChildrenTransitions="Default"
                     Spacing="5">
-            <wuc:SettingsExpander Description="Description"
+            <wuc:SettingsExpander Description="致力于优雅强大方便的终端监控软件"
                                   Header="ACOMv2"
                                   HeaderIcon="{wuc:BitmapIcon Source=Assets/icon.png}"
                                   IsExpanded="True">
