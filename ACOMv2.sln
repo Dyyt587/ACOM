@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACOMPlugin", "ACOMPlugin\ACOMPlugin.csproj", "{8F3E89EC-3F53-4372-86C7-F0F9997E615D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetPlug.Slide", "plugin_test2\WidgetPlug.Slide.csproj", "{D40D70AC-5D24-444C-9209-F28698D594BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetPlug.Slide", "WidgetPlug.Slide\WidgetPlug.Slide.csproj", "{D40D70AC-5D24-444C-9209-F28698D594BF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACOMCommmon", "ACOMCommmon\ACOMCommmon.csproj", "{3C497F81-2C5A-4F1B-AB27-69450D0F01D3}"
 EndProject
