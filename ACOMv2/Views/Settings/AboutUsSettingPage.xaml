@@ -29,9 +29,9 @@
                                     Spacing="5">
                             <TextBlock Text="Related Links" />
                             <HyperlinkButton Content="Source Code"
-                                             NavigateUri="https://github.com/WinUICommunity/WinUICommunity" />
+                                             NavigateUri="https://github.com/Dyyt587/ACOM" />
                             <HyperlinkButton Content="Release Notes"
-                                             NavigateUri="https://github.com/WinUICommunity/WinUICommunity/releases" />
+                                             NavigateUri="https://github.com/Dyyt587/ACOM/releases" />
                         </StackPanel>
                     </wuc:SettingsCard>
                 </wuc:SettingsExpander.Items>
