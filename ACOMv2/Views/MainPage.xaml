@@ -42,38 +42,13 @@
 
 
         <NavigationView x:Name="NavView" PaneDisplayMode="LeftCompact"
-                    Grid.Row="1" Grid.ColumnSpan="3"
+                    Grid.Row="1" Grid.ColumnSpan="3"  SelectionChanged="NavView_SelectionChanged"
                     IsBackButtonVisible="Collapsed" 
                     IsPaneToggleButtonVisible="False">
-            <NavigationView.Header>
+            <!--<NavigationView.Header>
                 <wuc:BreadcrumbNavigator x:Name="JsonBreadCrumbNavigator" />
-            </NavigationView.Header>
-
-            <!--<NavigationView.PaneFooter >
-                <Grid x:Name="DeviceConnectGrid">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="16" />
-                        <RowDefinition Height="48" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-
-
-                        
-                    <controls:ContentSizer Grid.Row="0" Orientation="Horizontal" FlowDirection="RightToLeft"
-                            TargetControl="{x:Bind DeviceConnectGrid}" VerticalAlignment="Top"
-
-                            Visibility="Visible" />
-                    <SelectorBar  Grid.Row="1"  Margin="10 0 10 0" Padding="0 0 10 0" SelectionChanged="SelectorBar_SelectionChanged">
-                        <SelectorBarItem Icon="{uii:FontIcon Glyph=&#xEF90;}" IsSelected="True" Text="串口" HorizontalAlignment="Stretch"/>
-                        <SelectorBarItem Icon="MapDrive" Text="TCP" HorizontalAlignment="Stretch"/>
-                        <SelectorBarItem Icon="{uii:FontIcon Glyph=&#xE969;}" Text="UDP" HorizontalAlignment="Stretch"/>
-                    </SelectorBar>
-                    <Frame Grid.Row="2" x:Name="DeviceConnectFrame"    Width="{x:Bind NavView.OpenPaneLength, Mode=TwoWay}"/>
-                </Grid>
-            </NavigationView.PaneFooter>-->
-
-            
-            <Grid>
+            </NavigationView.Header>-->            
+            <Grid x:Name="MainGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="240" />

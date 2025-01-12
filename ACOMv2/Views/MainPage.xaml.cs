@@ -1,4 +1,5 @@
 ﻿using ACOMv2.Views.DeviceConnect;
+using DryIoc;
 using Microsoft.UI.Xaml.Media.Animation;
 
 namespace ACOMv2.Views;
@@ -6,6 +7,7 @@ namespace ACOMv2.Views;
 public sealed partial class MainPage : Page
 {
     private int previousSelectedIndex;
+    private int flag = 1;
 
     public MainViewModel ViewModel { get; }
     public MainPage()
@@ -20,7 +22,7 @@ public sealed partial class MainPage : Page
         {
             jsonNavigationViewService.Initialize(NavView, NavFrame, NavigationPageMappings.PageDictionary);
             jsonNavigationViewService.ConfigJson("Assets/NavViewMenu/AppData.json");
-            jsonNavigationViewService.ConfigBreadcrumbBar(JsonBreadCrumbNavigator, BreadcrumbPageMappings.PageDictionary);
+            //jsonNavigationViewService.ConfigBreadcrumbBar(JsonBreadCrumbNavigator, BreadcrumbPageMappings.PageDictionary);
         }
 
 
@@ -63,41 +65,19 @@ public sealed partial class MainPage : Page
         AutoSuggestBoxHelper.OnITitleBarAutoSuggestBoxQuerySubmittedEvent(sender, args, NavFrame);
     }
 
-    private void SelectorBar_SelectionChanged(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
+ 
+    private void NavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
     {
-        SelectorBarItem selectedItem = sender.SelectedItem;
-        int currentSelectedIndex = sender.Items.IndexOf(selectedItem);
-        System.Type pageType;
-
-        switch (currentSelectedIndex)
+        // 根据目标页面类型执行相应的操作
+        if (args.IsSettingsSelected)
         {
-            case 0:
-                pageType = typeof(SerialConnect);
-                break;
-            case 1:
-                pageType = typeof(TCPConnect);
-                break;
-            case 2:
-                pageType = typeof(UDPConnect);
-                break;
-
-            default:
-                pageType = typeof(SerialConnect);
-                break;
+            MainGrid.ColumnDefinitions[1].Width = new GridLength(1080);
         }
+        else
+        {
 
-        var slideNavigationTransitionEffect = currentSelectedIndex - previousSelectedIndex > 0 ? SlideNavigationTransitionEffect.FromRight : SlideNavigationTransitionEffect.FromLeft;
-
-        //DeviceConnectFrame.Navigate(pageType, null, new SlideNavigationTransitionInfo() { Effect = slideNavigationTransitionEffect });
-
-        previousSelectedIndex = currentSelectedIndex;
-
+            MainGrid.ColumnDefinitions[1].Width = new GridLength(240);
+        }
     }
-
-
-
-
-
-
 }
 

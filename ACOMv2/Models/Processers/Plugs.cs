@@ -242,11 +242,6 @@ public class Plugs
         Debug.WriteLine(string.Format("==========【{0}】==========", "插件加载完成"));
         Debug.WriteLine(string.Format("==========【{0}】==========", "共加载插件{0}个"), IProcessersPlugins.Count+ IDataMuxersPlugins.Count + WidgetPlugins.Count);
 
-
-
-
-
-
     }
 
     static public IPlugProcessBase CreateInstance(string PlugName)

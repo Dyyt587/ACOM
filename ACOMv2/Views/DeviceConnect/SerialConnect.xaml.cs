@@ -37,6 +37,8 @@ namespace ACOMv2.Views.DeviceConnect
         {
             try
             {
+                //防止退出时候出现异常
+                if(DispatcherQueue !=null)
                 DispatcherQueue.TryEnqueue(() =>
                 {
 

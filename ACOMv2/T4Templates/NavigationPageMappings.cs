@@ -17,6 +17,5 @@ public partial class NavigationPageMappings
     {
         {"ACOMv2.Views.DeviceConnect.SerialConnect", typeof(ACOMv2.Views.DeviceConnect.SerialConnect)},
         {"ACOMv2.Views.DeviceConnect.TCPConnect", typeof(ACOMv2.Views.DeviceConnect.TCPConnect)},
-        {"ACOMv2.Views.DeviceConnect.UDPConnect", typeof(ACOMv2.Views.DeviceConnect.UDPConnect)},
     };
 }

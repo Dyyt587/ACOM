@@ -28,7 +28,7 @@ using System.Collections.ObjectModel;
 namespace WidgetPlug.Slide;
 public sealed partial class WidgetSlide : UserControl
 {
-    public main slide;
+    public Slide slide;
 
  
     public ObservableCollection<CannelData> cannel_data = new(); //数据颜色
