@@ -41,30 +41,7 @@ namespace ACOMv2.Views
             type.InvokeMember("ProtectedCursor", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.SetProperty | BindingFlags.Instance, null, uiElement, new object[] { cursor });
         }
     }
-
-    //public static class ContentSizerExtensions
-    //{
-    //    //private static CoreCursor defaultCursor;
-    //    protected override void OnManipulationDelta(ManipulationDeltaRoutedEventArgs e)
-    //    {
-
-    //    }
-
-    //}
-
-    //public class Part : Widget
-    //{
-    //    Grid elementGrid;//记录元素的Grid
-    //    public Part(ref Grid elementGrid)
-    //    {
-    //        this.elementGrid = elementGrid;
-    //    }
-    //}
-
-        /// <summary>
-        /// An empty page that can be used on its own or navigated to within a Frame.
-        /// </summary>
-        public sealed partial class CanvasPanelPage : Page
+    public sealed partial class CanvasPanelPage : Page
     {
 
         IO_Manage iomanage = IO_Manage.Instance;
@@ -162,47 +139,47 @@ namespace ACOMv2.Views
         }
 
         public static void RemoveControlAndParentsFromCanvas(FrameworkElement control)
-    {
-        // 找到控件所在的Canvas
-        Canvas canvas = FindParent<Canvas>(control);
-        if (canvas == null) return;
-
-        // 创建一个栈来存储需要移除的控件及其父控件
-        Stack<FrameworkElement> controlsToRemove = new ();
-        controlsToRemove.Push(control);
-
-        // 递归地将控件及其所有父控件加入栈中
-        while ((control = (FrameworkElement)VisualTreeHelper.GetParent(control)) != null && control != canvas)
         {
+            // 找到控件所在的Canvas
+            Canvas canvas = FindParent<Canvas>(control);
+            if (canvas == null) return;
+
+            // 创建一个栈来存储需要移除的控件及其父控件
+            Stack<FrameworkElement> controlsToRemove = new ();
             controlsToRemove.Push(control);
-        }
 
-        // 从栈中弹出控件并从Canvas中移除
-        while (controlsToRemove.Count > 0)
-        {
-            control = controlsToRemove.Pop();
-            if (canvas.Children.Contains(control))
+            // 递归地将控件及其所有父控件加入栈中
+            while ((control = (FrameworkElement)VisualTreeHelper.GetParent(control)) != null && control != canvas)
             {
-                canvas.Children.Remove(control);
+                controlsToRemove.Push(control);
+            }
+
+            // 从栈中弹出控件并从Canvas中移除
+            while (controlsToRemove.Count > 0)
+            {
+                control = controlsToRemove.Pop();
+                if (canvas.Children.Contains(control))
+                {
+                    canvas.Children.Remove(control);
+                }
             }
         }
-    }
 
         public static T FindParent<T>(FrameworkElement child) where T : FrameworkElement
         {
-        DependencyObject parentObject = VisualTreeHelper.GetParent(child);
-        if (parentObject == null) return null;
+            DependencyObject parentObject = VisualTreeHelper.GetParent(child);
+            if (parentObject == null) return null;
 
-        while (parentObject != null)
-        {
-            if (parentObject is T parent)
+            while (parentObject != null)
             {
-                return parent;
+                if (parentObject is T parent)
+                {
+                    return parent;
+                }
+                parentObject = VisualTreeHelper.GetParent(parentObject);
             }
-            parentObject = VisualTreeHelper.GetParent(parentObject);
+            return null;
         }
-        return null;
-    }
 
         private void KeyControl(object sender, KeyRoutedEventArgs e)
         {
@@ -283,12 +260,7 @@ namespace ACOMv2.Views
             {
                 ViewModel.CanvasPages.Remove(this);
             };
-            strings = new ObservableCollection<Symbol>
-            {
-                Symbol.AddFriend,
-                Symbol.Forward,
-                Symbol.Share
-            };
+
             this.InitializeComponent();
             ACOMPluginBase var;
             Plugs.WidgetPlugins.TryGetValue("ACOMPlug.Widget.Slide",out var);
@@ -298,7 +270,7 @@ namespace ACOMv2.Views
                 //CreateWidget(Plugs.WidgetPlugins["ACOMPlug.Widget.Slide"]);
             }
 
-
+             
 
 
             //FrameworkElement element = InitializeElementGrid( (Activator.CreateInstance(Models.Processers.Plugs.WidgetsPlugins[0]) as IPlugWidgetBase).Create());
@@ -330,13 +302,7 @@ namespace ACOMv2.Views
         private readonly Random rnd = new();
         private HomeLandingViewModel ViewModel;
 
-        private ObservableCollection<Symbol> strings { get; }
-
-
-
-
-       
-
+        
         private void rangeSelector_ManipulationDelta(object sender, ManipulationDeltaRoutedEventArgs e)
         {
             e.Handled = true;
@@ -346,5 +312,9 @@ namespace ACOMv2.Views
         {
 
         }
+
+
+
+
     }
 }

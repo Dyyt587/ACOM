@@ -186,6 +186,7 @@ public sealed partial class HomeLandingPage : Page
         }));
         this.InitializeComponent();
 
+        var t = WidgetChartFlyout;
 
         ViewModel.advancedCollectionView.SortDescriptions.Add(new SortDescription("DataName", SortDirection.Descending));
 
