@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetPlug.Button", "WidgetPlug.Button\WidgetPlug.Button.csproj", "{1704DF35-C6EA-3696-15B8-9FC8B3111C91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetPlug.Chart", "WidgetPlug.Chart\WidgetPlug.Chart.csproj", "{54642DD6-3031-F497-9544-A1878E0859AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -170,6 +172,18 @@ Global
 		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Release|x64.Build.0 = Release|Any CPU
 		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Release|x86.ActiveCfg = Release|Any CPU
 		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Release|x86.Build.0 = Release|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Debug|x64.Build.0 = Debug|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Debug|x86.Build.0 = Debug|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Release|ARM64.Build.0 = Release|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Release|x64.ActiveCfg = Release|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Release|x64.Build.0 = Release|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Release|x86.ActiveCfg = Release|Any CPU
+		{54642DD6-3031-F497-9544-A1878E0859AD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
