@@ -44,7 +44,7 @@ public partial class Button : ACOMPluginBase
         public override FrameworkElement Create()
         {
             WidgetButton widget = new WidgetButton();
-            widget.instance = this;
+            widget.slide = this;
             update += widget.updateData;
             return widget;
         }

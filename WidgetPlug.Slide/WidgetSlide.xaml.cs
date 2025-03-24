@@ -28,7 +28,7 @@ using System.Collections.ObjectModel;
 namespace WidgetPlug.Slide;
 public sealed partial class WidgetSlide : UserControl
 {
-    public Slide slide;
+    public Slide instance;
 
  
     public ObservableCollection<CannelData> cannel_data = new(); //数据颜色
@@ -106,7 +106,7 @@ public sealed partial class WidgetSlide : UserControl
     {
         List<SystemCommandEnum> cmd = new List<SystemCommandEnum>();
         cmd.Add(SystemCommandEnum.Delete);
-        slide.OnSystemCommand(this, cmd);
+        instance.OnSystemCommand(this, cmd);
     }
 
     private void OptionCheckBoxHandle(object sender, RoutedEventArgs e)

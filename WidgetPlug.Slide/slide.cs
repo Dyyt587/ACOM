@@ -44,7 +44,7 @@ public partial class Slide : ACOMPluginBase
         public override FrameworkElement Create()
         {
             WidgetSlide widget = new WidgetSlide();
-            widget.slide = this;
+            widget.instance = this;
             update += widget.updateData;
             return widget;
         }

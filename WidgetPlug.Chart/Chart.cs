@@ -1,9 +1,8 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using ACOMCommmon;
-
-
-
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Text;
@@ -20,13 +19,14 @@ using ShadowPluginLoader.MetaAttributes;
 
 
 
-namespace WidgetPlug.Button.Helpers
+namespace WidgetPlug.Chart.Helpers
 {
 }
-namespace WidgetPlug.Button
+
+namespace WidgetPlug.Chart
 {
 [AutoPluginMeta]
-public partial class Button : ACOMPluginBase
+public partial class Chart : ACOMPluginBase
 {
         IconSourceElement icon = new IconSourceElement();
 
@@ -36,14 +36,14 @@ public partial class Button : ACOMPluginBase
 
         public override IEnumerable<string> ResourceDictionaries => base.ResourceDictionaries;
 
-        public Button()
+        public Chart()
         {
             icon.IconSource = new Microsoft.UI.Xaml.Controls.SymbolIconSource() { Symbol = Symbol.Comment };
            /// OnSystemCommand(new List<SystemCommandEnum>() { SystemCommandEnum.Delete });
         }
         public override FrameworkElement Create()
         {
-            WidgetButton widget = new WidgetButton();
+            WidgetChart widget = new WidgetChart();
             widget.instance = this;
             update += widget.updateData;
             return widget;
@@ -89,7 +89,7 @@ public partial class Button : ACOMPluginBase
 
         public override string GetTag()
         {
-            return "Button";
+            return "Chart";
         }
 
         public override string ToString()

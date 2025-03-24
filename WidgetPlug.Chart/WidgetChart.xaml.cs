@@ -25,10 +25,10 @@ using System.Collections.ObjectModel;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace WidgetPlug.Button;
-public sealed partial class WidgetButton : UserControl
+namespace WidgetPlug.Chart;
+public sealed partial class WidgetChart : UserControl
 {
-    public Button instance;
+    public Chart instance;
 
  
     public ObservableCollection<CannelData> cannel_data = new(); //数据颜色
@@ -52,7 +52,7 @@ public sealed partial class WidgetButton : UserControl
         ShowMenu(sender, true);
 
     }
-    public WidgetButton()
+    public WidgetChart()
     {
         rounder.Increment = 0.000001;
         rounder.RoundingAlgorithm = RoundingAlgorithm.RoundDown;

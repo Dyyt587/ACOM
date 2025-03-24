@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Globals">
+    <WebView2LoaderPreference>Static</WebView2LoaderPreference>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>plugin_test2</RootNamespace>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <UseWinUI>true</UseWinUI>
+    <NoWarn>MSB3277</NoWarn>
+    <!-- Nuget -->
+    <PackageId>ACOMPlug.Widget.Chart</PackageId>
+    <Version>1.0.0.12</Version>
+    <!-- PluginMeta -->
+    <PluginMeta>
+      <!-- 使用上文的PackageId变量 -->
+      <Id>$(PackageId)</Id>
+      <Name>emoji</Name>
+      <Version>$(Version)</Version>
+      <Author>kitUIN</Author>
+    </PluginMeta>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup> 
+  <ItemGroup>
+    <None Remove="WidgetChart.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.WinUI.Controls.RangeSelector" Version="8.1.240916" />
+    <PackageReference Include="CommunityToolkit.WinUI.Controls.SettingsControls" Version="8.1.240916" />
+    <PackageReference Include="DevWinUI.ContextMenu" Version="8.1.0" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.241114003" />
+    <PackageReference Include="ShadowPluginLoader.MetaAttributes" Version="1.1.2" />
+    <PackageReference Include="ShadowPluginLoader.SourceGenerator" Version="1.3.2" />
+    <PackageReference Include="ShadowPluginLoader.Tool" Version="1.2.1" />
+    <PackageReference Include="ShadowPluginLoader.WinUI" Version="1.3.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ACOMPlugin\ACOMPlugin.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="WidgetChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  </Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)&quot; &quot;$(ProjectDir)..\Packages\$(ProjectName)&quot; /E /I /Y " />
+  </Target>
+  
+</Project>

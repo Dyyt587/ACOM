@@ -1,0 +1,37 @@
+﻿{
+  "Namespace": "ACOMPlugin.Core",
+  "Type": "ACOMPluginMetaData",
+  "Properties": {
+    "Author": {
+      "Type": "string",
+      "PropertyGroupName": "Author"
+    },
+    "Id": {
+      "Type": "string",
+      "PropertyGroupName": "Id"
+    },
+    "Name": {
+      "Type": "string",
+      "PropertyGroupName": "Name"
+    },
+    "DllName": {
+      "Type": "string",
+      "PropertyGroupName": "DllName"
+    },
+    "Version": {
+      "Type": "string",
+      "PropertyGroupName": "Version"
+    },
+    "Dependencies": {
+      "Type": "string[]",
+      "PropertyGroupName": "Dependencies"
+    }
+  },
+  "Required": [
+    "Author",
+    "Id",
+    "Name",
+    "Version",
+    "Dependencies"
+  ]
+}

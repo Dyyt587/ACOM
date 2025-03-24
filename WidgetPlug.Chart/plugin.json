@@ -1,0 +1,8 @@
+{
+  "DllName": "WidgetPlug.Chart",
+  "Author": "kitUIN",
+  "Id": "ACOMPlug.Widget.Chart",
+  "Name": "emoji",
+  "Version": "1.0.0.12",
+  "Dependencies": []
+}
