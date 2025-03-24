@@ -1,0 +1,8 @@
+{
+  "DllName": "WidgetPlug.Button",
+  "Author": "kitUIN",
+  "Id": "ACOMPlug.Widget.Button",
+  "Name": "emoji",
+  "Version": "1.0.0.12",
+  "Dependencies": []
+}

@@ -7,7 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:CommunityToolkit.WinUI.Controls"
-    xmlns:wuc="using:WinUICommunity" xmlns:acomcommmon="using:ACOMCommmon"
+    xmlns:dev="using:DevWinUI" xmlns:acomcommmon="using:ACOMCommmon"
     mc:Ignorable="d">
     <UserControl.Resources>
 
@@ -56,7 +56,6 @@
                         </ScrollViewer>
                     </StackPanel>
                 </RelativePanel>
-                <wuc:SettingsCard >
                     <Grid  HorizontalAlignment="Stretch" Width="320">
                         <TextBlock Text="滑块步进值" VerticalAlignment="Center"  HorizontalAlignment="Left"/>
                         <NumberBox Grid.Column="2" x:Name="SliderStepNumberBox"
@@ -70,9 +69,7 @@
                                    LargeChange="1" />
                     </Grid>
 
-                </wuc:SettingsCard>
 
-                <wuc:SettingsCard >
                     <Grid  HorizontalAlignment="Stretch" Width="320">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
@@ -96,7 +93,6 @@
                                     SmallChange="0.1"
                                     LargeChange="1" />
                     </Grid>
-                </wuc:SettingsCard>
 
             </StackPanel>
         </Flyout>

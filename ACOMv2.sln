@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetPlug.Slide", "WidgetP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACOMCommmon", "ACOMCommmon\ACOMCommmon.csproj", "{3C497F81-2C5A-4F1B-AB27-69450D0F01D3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetPlug.Button", "WidgetPlug.Button\WidgetPlug.Button.csproj", "{1704DF35-C6EA-3696-15B8-9FC8B3111C91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -154,8 +158,26 @@ Global
 		{3C497F81-2C5A-4F1B-AB27-69450D0F01D3}.Release|x64.Build.0 = Release|Any CPU
 		{3C497F81-2C5A-4F1B-AB27-69450D0F01D3}.Release|x86.ActiveCfg = Release|Any CPU
 		{3C497F81-2C5A-4F1B-AB27-69450D0F01D3}.Release|x86.Build.0 = Release|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Debug|x64.Build.0 = Debug|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Debug|x86.Build.0 = Debug|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Release|ARM64.Build.0 = Release|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Release|x64.ActiveCfg = Release|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Release|x64.Build.0 = Release|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Release|x86.ActiveCfg = Release|Any CPU
+		{1704DF35-C6EA-3696-15B8-9FC8B3111C91}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {71997133-9927-44A7-BF95-75A4C1AD12FC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FA6829E-04FA-4783-89C8-FC2D5E9B420D}
 	EndGlobalSection
 EndGlobal
