@@ -395,69 +395,12 @@
                                   Label="Picture effects" />
                             <AppBarButton Icon="{ui:FontIcon Glyph=&#xE7AD;}"
                                   Label="Rotate" />
-                            <!--<AppBarElementContainer>
-                                <muxc:SplitButton>
-                                    <StackPanel Orientation="Horizontal"
-                                        Spacing="12">
-                                        <FontIcon FontFamily="{ThemeResource SymbolThemeFontFamily}"
-                                          FontSize="16"
-                                          Glyph="&#xE7A8;" />
-                                        <TextBlock FontSize="12"
-                                           Text="Crop" />
-                                    </StackPanel>
-                                    <muxc:SplitButton.Flyout>
-                                        <MenuFlyout>
-                                            <MenuFlyoutItem Icon="{ui:FontIcon Glyph=&#xE7A8;}"
-                                                    Text="Crop" />
-                                            <MenuFlyoutItem Icon="{ui:FontIcon Glyph=&#xF407;}"
-                                                    Text="Crop to Shape" />
-                                            <MenuFlyoutItem Text="Aspect Ratio" />
-                                            <MenuFlyoutSeparator />
-                                            <MenuFlyoutItem Text="Fill" />
-                                            <MenuFlyoutItem Text="Fit" />
-                                        </MenuFlyout>
-                                    </muxc:SplitButton.Flyout>
-                                </muxc:SplitButton>
-                            </AppBarElementContainer>-->
+
                         </controls:TabbedCommandBarItem>
                     </controls:TabbedCommandBar.MenuItems>
                 </controls:TabbedCommandBar>
 
-                <!--<CommandBar Grid.Row="2" >
-                    
-                    <AppBarToggleButton Icon="Shuffle" Label="Shuffle" Click="AppBarButton_Click" />
-                    <AppBarToggleButton Icon="RepeatAll" Label="Repeat" Click="AppBarButton_Click"/>
-                    <AppBarSeparator/>
-                    <AppBarButton Icon="Link" Label="Back" Click="AppBarButton_Click"/>
-                    <AppBarButton Icon="PreviewLink" Label="Stop" Click="AppBarButton_Click"/>
-                    <AppBarToggleButton Icon="Play" Label="Play" Click="AppBarButton_Click_Play" ToolTipService.ToolTip="开始/暂停"/>
-                    <AppBarButton Icon="Download" Label="down" Click="AppBarButton_Click_Down" ToolTipService.ToolTip="到达最底部"/>
-                    <AppBarButton Icon="Add" Label="add" Click="AppBarButton_Click_ADD" ToolTipService.ToolTip="添加小部件">
-                        <AppBarButton.Flyout>
-                            <Flyout>
-                                <ListView Height="160" Width="800" SelectionMode="Extended"
-                                ItemTemplate="{StaticResource SmallPartsListViewTemplate}">
-                                    
-                                    <ListView.ItemsPanel>
-                                        <ItemsPanelTemplate>
-                                            <ItemsStackPanel Orientation="Horizontal"/>
-                                        </ItemsPanelTemplate>
-                                    </ListView.ItemsPanel>
 
-                                </ListView>
-                            </Flyout>
-                        </AppBarButton.Flyout>
-                    </AppBarButton>
-                    
-                    <CommandBar.SecondaryCommands>
-                        <AppBarButton Label="Like" Click="AppBarButton_Click"/>
-                        <AppBarButton Label="Dislike" Click="AppBarButton_Click"/>
-                    </CommandBar.SecondaryCommands>
-
-                    <CommandBar.Content>
-                        <TextBlock Text="Now playing..." Margin="12,14"/>
-                    </CommandBar.Content>
-                </CommandBar>-->
  
                 <textcontrolbox:TextControlBox ShowLineHighlighter="True" SyntaxHighlighting="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                 x:Name="dialogTextBox" Grid.Row="3" Margin="0 88 6 40" IsReadonly="False" Text="{x:Bind total_str.totalString,Mode=OneTime}">
