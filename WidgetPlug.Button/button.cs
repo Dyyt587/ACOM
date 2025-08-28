@@ -65,7 +65,7 @@ public partial class Button : ACOMPluginBase
 
         public override string GetName()
         {
-            return "滑块";
+            return "按钮";
         }
         //public void UpdateData(List<CannelData> newData)
         //{
@@ -84,12 +84,12 @@ public partial class Button : ACOMPluginBase
 
         public override string GetLabel()
         {
-            return "滑块";
+            return "按钮";
         }
 
         public override string GetTag()
         {
-            return "Button";
+            return "Button";//只能是英文且需要和类名相同
         }
 
         public override string ToString()

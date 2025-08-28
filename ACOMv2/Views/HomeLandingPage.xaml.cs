@@ -167,6 +167,8 @@ public sealed partial class HomeLandingPage : Page
         });
     }
 
+    public static HomeLandingPage Instance { get; private set; }
+
     public HomeLandingPage()
     {
         iomanage.page = this;
@@ -185,6 +187,7 @@ public sealed partial class HomeLandingPage : Page
 
         }));
         this.InitializeComponent();
+        Instance = this;
 
         var t = WidgetChartFlyout;
 
@@ -512,6 +515,15 @@ public sealed partial class HomeLandingPage : Page
     private void AppBarToggleButton_Unchecked(object sender, RoutedEventArgs e)
     {
         timer.Stop();
+    }
+
+    public void CreateWidgetOnCurrentTab(ACOMPluginBase plug)
+    {
+        var page = ConvertTabViewItemToPage<CanvasPanelPage>(TabView1.SelectedItem);
+        if (plug != null && page != null)
+        {
+            page.CreateWidget(plug);
+        }
     }
 }
 

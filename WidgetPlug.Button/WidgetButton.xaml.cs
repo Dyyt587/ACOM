@@ -82,8 +82,8 @@ public sealed partial class WidgetButton : UserControl
                     cannel_data.Add(newDataItem);
                 }
             }
-            if(cannel_index.Count !=0)
-            MainSlider.Value =  Convert.ToDouble(cannel_data[cannel_index[cannel_index.Count-1]].Data);
+            //if(cannel_index.Count !=0)
+           // MainSlider.Value =  Convert.ToDouble(cannel_data[cannel_index[cannel_index.Count-1]].Data);
 
         });
     }
@@ -131,5 +131,10 @@ public sealed partial class WidgetButton : UserControl
         }
  
  
+    }
+
+    private void MainButton_Click(object sender, RoutedEventArgs e)
+    {
+
     }
 }

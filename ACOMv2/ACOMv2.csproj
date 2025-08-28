@@ -53,7 +53,7 @@
 	  <Generator>TextTemplatingFileGenerator</Generator>
 	  <LastGenOutput>NavigationPageMappings.cs</LastGenOutput>
 	</None>
-	<Page Update="Views\DeviceConnect\UDPConnect.xaml">
+	<Page Update="Views\DeviceConnect\Parts.xaml">
 	  <Generator>MSBuild:Compile</Generator>
 	</Page>
 	<Page Update="Views\DeviceConnect\TCPConnect.xaml">
@@ -102,7 +102,6 @@
   <ItemGroup>
     <None Remove="Views\CanvasPanelPage.xaml" />
     <None Remove="Views\DeviceConnect\TCPConnect.xaml" />
-    <None Remove="Views\DeviceConnect\UDPConnect.xaml" />
     <None Remove="Views\MainCanvasPage.xaml" />
     <None Remove="Views\SerialConnect.xaml" />
   </ItemGroup>

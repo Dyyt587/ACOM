@@ -22,7 +22,7 @@
         <Flyout Placement="Right" x:Name="PartsCommandBarFlyout" ShowMode="Auto" >
             <StackPanel  >
                 <RelativePanel  >
-                    <TextBox x:Name="WidgetNameText" Text="Slider1" Header="控件名字" FontSize="16" FontWeight="Bold" PlaceholderText="Name"  Width="240"/>
+                    <TextBox x:Name="WidgetNameText" Text="Button1" Header="控件名字" FontSize="16" FontWeight="Bold" PlaceholderText="Name"  Width="240"/>
 
                     <Button x:Name="WidgetDeleteButton" Content="删除控件" RelativePanel.RightOf="WidgetNameText"
                             RelativePanel.AlignRightWith="Pannel1" Click="WidgetDeleteButton_Click"
@@ -101,29 +101,32 @@
         <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="8 8 0 0">
             <Grid>
 
-                <TextBlock Text="{x:Bind WidgetNameText.Text,Mode=TwoWay}" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20 0 0 0"/>
 
-                <TextBlock x:Name="NumberBox11"  Text="{x:Bind MainSlider.Value,Mode=OneWay}" VerticalAlignment="Center"  
+                <!--<TextBlock x:Name="NumberBox11"  Text="{x:Bind MainSlider.Value,Mode=OneWay}" VerticalAlignment="Center"  
                                             HorizontalAlignment="Right"
-                                              Margin="0 0 18 0" />
+                                              Margin="0 0 18 0" />-->
             </Grid>
-
-             <Slider MinWidth="32" x:Name="MainSlider"
+            <Button x:Name="MainButton"  FontSize="14" 
+                                            HorizontalAlignment="Stretch" Margin="0 8 0 0"
+                                            Click="MainButton_Click" >
+                <TextBlock Text="{x:Bind WidgetNameText.Text,Mode=TwoWay}" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 0"/>
+            </Button>
+            <!--<Slider MinWidth="32" x:Name="MainSlider"
                      AutomationProperties.Name="Slider with ticks"
                      TickFrequency="20" Value="0"
                      StepFrequency="{x:Bind SliderStepNumberBox.Value,Mode=OneWay}"
                      Maximum="{x:Bind MaxRangeNumberBox.Value,Mode=OneWay}"
                      Minimum="{x:Bind MinRangeNumberBox.Value,Mode=OneWay}"
                      TickPlacement="Outside"  ManipulationDelta="Slider_ManipulationDelta"
-                     SnapsTo="StepValues" HorizontalAlignment="Stretch"  ManipulationMode="TranslateX,TranslateY"/>
+                     SnapsTo="StepValues" HorizontalAlignment="Stretch"  ManipulationMode="TranslateX,TranslateY"/>-->
 
-            <NumberBox Grid.Column="2" x:Name="SliderNumberBox" FontSize="14" 
+            <!--<NumberBox Grid.Column="2" x:Name="SliderNumberBox" FontSize="14" 
                                             HorizontalAlignment="Stretch"
                                             Value="{x:Bind MainSlider.Value,Mode=TwoWay}" Margin="10 0 10 0"
                                             SpinButtonPlacementMode="Inline"
                                             Maximum="{x:Bind MainSlider.Maximum,Mode=OneWay}"
                                             SmallChange="{x:Bind SliderStepNumberBox.Value,Mode=OneWay}"
-                                            LargeChange="10" />
+                                            LargeChange="10" />-->
         </StackPanel>
     </Grid>
 </UserControl>

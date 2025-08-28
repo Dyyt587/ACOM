@@ -183,16 +183,35 @@ public class Plugs
             instance = null;
         }
     }
-
+    /// <summary>
+    /// 搜索字符串找到"ACOMv2"，并将其后续字符截断
+    /// </summary>
+    /// <param name="input">输入字符串</param>
+    /// <returns>截断后的字符串</returns>
+    private static string TruncateAfterACOMv2(string input)
+    {
+        const string keyword = "ACOM";
+        int index = input.IndexOf(keyword, StringComparison.Ordinal);
+        if (index >= 0)
+        {
+            return input.Substring(0, index + keyword.Length);
+        }
+        return input;
+    }
     private static async Task InitPlug()
     {
         var loader = DiFactory.Services.Resolve<ACOMPluginLoader>();
         //await loader.ImportFromZipAsync(@"C:\Users\80520\source\repos\ACOM\Packages");
 
-        //
-        //string directoryPath = @"C:\ACOM\Packages"; // 替换为你的文件夹路径
-        //string directoryPath = @"C:\Users\80520\source\repos\ACOM\Packages"; // 替换为你的文件夹路径
         string directoryPath = @"C:\Users\DDT\Documents\GitHub\ACOM\Packages"; // 替换为你的文件夹路径
+                                                                                 // 获取工程根目录（假设以当前可执行文件所在目录为根）
+        string baseDirectory = AppContext.BaseDirectory;
+        baseDirectory = TruncateAfterACOMv2(baseDirectory);
+        Debug.WriteLine(baseDirectory);
+        // 或者使用：string baseDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+        // 拼接Packages目录
+        directoryPath = Path.Combine(baseDirectory, "Packages");
         //string directoryPath = @"C:\Users\80520\source\repos\ACOM\plugin_test2\bin\Debug"; // 替换为你的文件夹路径
 
         if (Directory.Exists(directoryPath))
@@ -205,7 +224,7 @@ public class Plugs
                 await loader.ImportFromDirAsync(subDirectory);
 
 
-                Debug.WriteLine("已经加载到 " + loader.GetPlugins().Count().ToString() + " 个插件");
+                Debug.WriteLine("已加载完成 " + loader.GetPlugins().Count().ToString() + " 个插件");
 
             }
             foreach (var plugin in loader.GetPlugins())
